@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gitlab on My Personal Blog</title>
+    <link>http://dafian47.gitlab.io/blog/tags/gitlab/index.xml</link>
+    <description>Recent content in Gitlab on My Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://dafian47.gitlab.io/blog/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Project di GitLab</title>
+      <link>http://dafian47.gitlab.io/blog/post/project-gitlab/</link>
+      <pubDate>Wed, 05 Jul 2017 16:34:24 +0200</pubDate>
+      
+      <guid>http://dafian47.gitlab.io/blog/post/project-gitlab/</guid>
+      <description>
+
+&lt;h1 id=&#34;login-gitlab&#34;&gt;Login GitLab&lt;/h1&gt;
+
+&lt;p&gt;Silahkan Login menggunakan akun email Anda, jika belum pernah mendaftar dapat Register dari awal dengan klik tombol Sign Up. Dalam hal ini Anda dianggap telah Register. Silahkan klik tombol Sign In.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;pic/page-login.png&#34; alt=&#34;Halaman Login&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;halaman-group&#34;&gt;Halaman Group&lt;/h1&gt;
+
+&lt;p&gt;Setelah anda berhasil login. Masuk ke halaman Grup dengan cara klik tombol drawer di pojok kiri atas dan pilih Groups. Sehingga tampilan menjadi seperti ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;pic/page-group.png&#34; alt=&#34;Halaman Group&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;contoh-remote-repo-menggunakan-gitlab&#34;&gt;Contoh Remote Repo Menggunakan GitLab&lt;/h1&gt;
+
+&lt;p&gt;Setelah ini anda akan membuat demo repo untuk digunakan bersama Git yang tersinkron pada GitLab ini. Yang pertama klik tombol New Project. Dan isikan sesuai kebutuhan. Misalnya sebagai berikut&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;pic/page-create-repo.png&#34; alt=&#34;Halaman Remote Repo Baru&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Project name&lt;/strong&gt; isikan dengan nama project kita. Dalam hal ini project yang kita buat bernama DemoGit.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Project description&lt;/strong&gt; isikan dengan penjelasan dan keterangan tentang project kita. Bersifat opsional, tetapi disarankan di isi untuk memperjelas keterangan project kita. Biarkan default pengaturan lainnya. Setelah itu klik tombol Create Project.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Setelah itu otomatis anda akan di arahkan ke halaman detail project yang kita buat tadi. Misalnya seperti berikut.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;pic/page-demogit.png&#34; alt=&#34;Halaman DemoGit&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Scroll kebawah maka akan tampil petunjuk untuk menghubungkan repo di lokal dan repo di GitLab. Dalam hal ini kita akan memanfatkan salah satu IDE Git yaitu SourceTree. Saya memilihnya karena lebih mudah dibandingkan yang lain. Terdapat di Windows dan Mac. Dan untuk Multiple Remote dengan Bitbucket lebih mudah, dikarenakan SourceTree adalah IDE yang dibangun oleh Tim Atlassian dan Bitbucket adalah salah satu productnya sehingga integrasi keduanya sangat cocok. Karena kita menggunakan GitLab maka akan ada sedikit &lt;em&gt;Trick&lt;/em&gt; untuk dapat melakukan integrasi antara SourceTree dan GitLab.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,508 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta property="og:title" content=" Menggunakan SourceTree &middot;  My Personal Blog" />
+        <meta property="og:site_name" content="My Personal Blog" />
+        <meta property="og:url" content="http://dafian47.gitlab.io/blog/post/using-sourcetree/" />
+
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:published_time" content="2017-07-05T16:54:24&#43;02:00" />
+        <meta property="og:article:tag" content="sourcetree" />
+        <meta property="og:article:tag" content="git" />
+        
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@" />
+        <meta name="twitter:creator" content="@" />
+        <meta name="twitter:title" content="Menggunakan SourceTree" />
+        <meta name="twitter:description" content="Menggunakan SourceTree sebagai Git Client" />
+        <meta name="twitter:url" content="http://dafian47.gitlab.io/blog/post/using-sourcetree/" />
+    
+
+        <title> Menggunakan SourceTree &middot;  My Personal Blog</title>
+
+        <link rel="preload" href="http://dafian47.gitlab.io/blogjs/main.js" as="script" />
+        <link rel="preload" href="http://dafian47.gitlab.io/blogcss/main.css" as="style" />
+
+    
+        <meta name="description" content="Menggunakan SourceTree sebagai Git Client" />
+    
+
+    
+        <meta name="p:domain_verify" content=""/>
+    
+
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        
+        
+
+    
+        <link href="http://dafian47.gitlab.io/blogindex.xml" rel="alternate" type="application/rss+xml" title="My Personal Blog" />
+    
+
+    
+        <link rel="canonical" href="http://dafian47.gitlab.io/blog/post/using-sourcetree/" />
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "http:\/\/dafian47.gitlab.io\/blog\/post\/using-sourcetree\/"
+        },
+        "headline": "Menggunakan SourceTree",
+        "description": "Menggunakan SourceTree sebagai Git Client",
+        "author": {
+            "@type": "Person",
+            "name": " ",
+            "url": "http://profiles.google.com/?rel=author",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https:",
+              "height": 80,
+              "width": 80
+            }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "@id": "http:\/\/dafian47.gitlab.io\/blog",
+          "name": "My Personal Blog",
+          "url": "http:\/\/dafian47.gitlab.io\/blog",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https:",
+            "height": 80,
+            "width": 80
+          }
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "http:\/\/dafian47.gitlab.io\/blog\/images\/blog-sourcetree.png",
+          "height": 133,
+          "width": 200
+        },
+        "datePublished": "2017-07-05",
+        "dateModified": "2017-07-05",
+        "wordCount":  957 ,
+        "keywords": "[\"sourcetree\",\"git\"]" 
+    }
+    </script>
+
+
+    
+    <script type="text/javascript">
+    
+    
+    </script>
+    
+
+    <script type="text/javascript">
+      var config = {
+        baseUrl: "http:\/\/dafian47.gitlab.io\/blog"
+      };
+    </script>
+
+    <style>
+html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,figure,footer,header,main,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figure{margin:1em 40px}a{background-color:transparent;-webkit-text-decoration-skip:objects}img{border-style:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}@font-face{font-family:'Merriweather Sans';font-style:normal;font-weight:300;src:local("Merriweather Sans Light"),local(MerriweatherSans-Light),url(//fonts.gstatic.com/s/merriweathersans/v5/6LmGj5dOJopQKEkt88GowY_zIojJi0m4a5Z6tRh6itY.woff) format("woff")}@font-face{font-family:'Merriweather Sans';font-style:normal;font-weight:400;src:local("Merriweather Sans Regular"),local(MerriweatherSans-Regular),url(//fonts.gstatic.com/s/merriweathersans/v5/AKu1CjQ4qnV8MUltkAX3sL2aU247V0zTzydO4RoO9Ok.woff) format("woff")}@font-face{font-family:'Merriweather Sans';font-style:normal;font-weight:700;src:local("Merriweather Sans Bold"),local(MerriweatherSans-Bold),url(//fonts.gstatic.com/s/merriweathersans/v5/6LmGj5dOJopQKEkt88GowQfd-b-I5PxxcmB4_-MNcqw.woff) format("woff")}@font-face{font-family:'Merriweather Sans';font-style:normal;font-weight:800;src:local("Merriweather Sans ExtraBold"),local(MerriweatherSans-ExtraBold),url(//fonts.gstatic.com/s/merriweathersans/v5/6LmGj5dOJopQKEkt88GowWT7sFQ1Iz1BbpcuCPlgc9Q.woff) format("woff")}@font-face{font-family:'Merriweather Sans';font-style:italic;font-weight:300;src:local("Merriweather Sans Light Italic"),local(MerriweatherSans-LightItalic),url(//fonts.gstatic.com/s/merriweathersans/v5/nAqt4hiqwq3tzCecpgPmVX9UU5BmOJGkLxUCVv5VXdc.woff) format("woff")}@font-face{font-family:'Merriweather Sans';font-style:italic;font-weight:400;src:local("Merriweather Sans Italic"),local(MerriweatherSans-Italic),url(//fonts.gstatic.com/s/merriweathersans/v5/3Mz4hOHzs2npRMG3B1ascf0KIgDhPIHb_R-SWdtqte8.woff) format("woff")}@font-face{font-family:'Merriweather Sans';font-style:italic;font-weight:700;src:local("Merriweather Sans Bold Italic"),local(MerriweatherSans-BoldItalic),url(//fonts.gstatic.com/s/merriweathersans/v5/nAqt4hiqwq3tzCecpgPmVYM8pfYvjMoOxygpzLVILAs.woff) format("woff")}@font-face{font-family:'icons';src:url(http://dafian47.gitlab.io/blog/fonts/icons.eot?9273991);src:url(http://dafian47.gitlab.io/blog/fonts/icons.eot?9273991#iefix) format("embedded-opentype"),url(http://dafian47.gitlab.io/blog/fonts/icons.woff?9273991) format("woff"),url(http://dafian47.gitlab.io/blog/fonts/icons.ttf?9273991) format("truetype"),url(http://dafian47.gitlab.io/blog/fonts/icons.svg?9273991#icons) format("svg");font-weight:400;font-style:normal}[class^="icon-"]:before{font-family:"icons";font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:.2em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;margin-left:.2em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-arrow-right:before{content:'\e807'}.icon-rss:before{content:'\e808'}body{font:300 1em / 1.5em 'Merriweather Sans',sans-serif;color:#595B66}a{color:inherit;text-decoration:none;font-weight:400}h1,h2{text-rendering:optimizeLegibility;color:#1F2026}h2 a{font-weight:inherit}h1{font-size:2em;line-height:1em;margin:2em 0 -.5em}h2{font-size:1.75em;line-height:1.143em;margin:2.286em 0 -.571em}p{margin:2em auto}i{font-weight:400;font-style:italic;color:#363740}img{display:block;max-width:100%;height:auto;margin:2.5em auto}body{background:#fff}.inner{max-width:48em;margin:0 auto;padding:0 1em}#wrapper{position:relative;box-sizing:border-box;width:100%;min-height:100vh;padding-bottom:6em;background:#F2F3F5}#push{transform:translate3d(0,0,0);transform-style:preserve-3d;opacity:1}#nav{position:relative;background:#fff;z-index:70;transform:translate3d(0,0,0);transform-style:preserve-3d;opacity:1}#nav:after{clear:both;content:'';display:table}#nav .nav-logo{float:left;height:2em;padding:1em;max-width:50%}#nav .nav-logo img{width:auto;max-width:none;height:2em;margin:0;border-radius:5px}#nav .nav-menu{float:right}#nav .nav-menu:after{clear:both;content:'';display:table}#nav .nav-menu a{display:block;width:1em;height:1em;line-height:1em;padding:1.5em;text-align:center;float:left}#nav .nav-menu a i:before{margin:auto}.overlay{display:none;position:fixed;left:0;top:0;width:100%;height:100%;z-index:80;display:none}.overlay:before{content:'';position:absolute;left:0;top:0;width:100%;height:100%;background:#1F2026;opacity:0;transform-style:preserve-3d}#header{position:relative;padding:4em 0}#header .inner{position:relative;z-index:2}#header .header-title{display:block;text-align:center}#header .header-name{font-weight:700;letter-spacing:-1px;display:block;line-height:1em;font-size:2em;text-decoration:none;color:#1F2026;padding:0;margin:0}#header.has-cover .header-name{color:#fff}#header .header-description{display:block;margin:1em auto 0;color:#9D9FA6;position:relative;font-weight:300}#header .header-description:after{content:'';position:absolute;height:1px;width:100px;margin-left:-50px;left:50%;top:-.5em;background:#D4D5D9}#header.has-cover .header-description{color:#fff}#header.has-cover .header-description:after{background:#fff}#header .header-cover{position:absolute;width:100%;height:100%;top:0;left:0;margin-top:-4em;padding:4em 0;background:no-repeat fixed center 100% / cover;z-index:1}#header .header-cover:before{content:'';position:absolute;width:100%;height:100%;left:0;top:0;background:rgba(0,0,0,0.2)}#header .header-cover:after{content:'';position:absolute;width:100%;left:0;bottom:0;border-bottom:4px solid #36D995}#footer{position:absolute;width:100%;left:0;bottom:0;font-size:.75em;line-height:1.334em;background:#1F2026;color:#737580;z-index:20;transform:translate3d(0,0,0);transform-style:preserve-3d;opacity:1}#footer a{color:#9D9FA6;font-weight:400}#footer .credits{text-align:center;font-size:.75em;line-height:1.334em;padding:2.667em;overflow:auto}#footer .credits span{display:block}#footer .credits .credits-theme{float:left}#footer .credits .credits-software{float:right}.post{position:relative;z-index:20}.post .post-image{display:block;margin:0;padding:0}.post .post-image img{display:block;width:100%;height:auto;margin:0;padding:0}.post .post-meta{display:block;font-size:.75em;line-height:1.334em;font-weight:400;margin-bottom:1.334em}.post .post-title{position:relative;color:#000;font-size:2em;line-height:1.375em;font-weight:800;text-indent:-1px;margin:.25em 0 .75em}.post .post-title:before{content:'';position:absolute;left:0;bottom:-.334em;width:1em;margin-bottom:-2px;border-bottom:4px solid #36D995}.post .post-title a{text-decoration:none;color:inherit;font-weight:inherit}#post-index{position:relative;max-width:1200px;margin:0 auto 4em;padding:.5em;z-index:10}@keyframes fade{0%{transform:translate3d(0,3em,0);opacity:0}100%{transform:translate3d(0,0,0);opacity:1}}.post-list{position:relative}.post-list .post{float:left;width:33.3%;transform:translate3d(0,3em,0);transform-style:preserve-3d;opacity:0;animation:fade ease-out .5s forwards;animation-delay:1.4s}@media only screen and (max-width: 50em){.post-list .post{width:49.9%}}@media only screen and (max-width: 30em){.post-list .post{width:100%;float:none}}.post-list .post:nth-child(1){animation-delay:.1s}.post-list .post:nth-child(2){animation-delay:.2s}.post-list .post:nth-child(3){animation-delay:.3s}.post-list .post:nth-child(4){animation-delay:.4s}.post-list .post:nth-child(5){animation-delay:.5s}.post-list .post:nth-child(6){animation-delay:.6s}.post-list .post:nth-child(7){animation-delay:.7s}.post-list .post:nth-child(8){animation-delay:.8s}.post-list .post:nth-child(9){animation-delay:.9s}.post-list .post .inner{padding:2em;margin:.5em;max-width:none;background:#fff;box-sizing:border-box;transform:scale(1);transform-style:preserve-3d}@media only screen and (max-width: 50em){.post-list .post .inner{padding:1em}}.post-list .post .post-link{position:absolute;left:0;top:0;width:100%;height:100%;z-index:10}.post-list .post .post-image{position:relative;margin:-2em -2em 0;overflow:hidden;background:#36D995}@media only screen and (max-width: 50em){.post-list .post .post-image{margin:-1em -1em 0}}.post-list .post .post-image img{transform:scale(1);transform-style:preserve-3d;opacity:1}.post-list .post .post-image:after{content:'';position:absolute;left:-5%;bottom:-2.5em;width:110%;height:4em;background:#fff;border-top:4px solid #36D995;box-shadow:0 0 2em rgba(0,0,0,0.2);transform:rotate(5deg)}.post-list .post .post-title{font-size:1.5em;line-height:1.167em}.post-list .post .post-excerpt{margin:0}.post-list .post .post-more{display:block;margin-top:1.5em}.post-list .post .post-more a{display:inline-block;font-size:.875em;line-height:1.143em;font-weight:400;color:#363740}.post-list .post .post-more a i{color:#2DB77E}.pagination{min-height:3em;margin:4em auto 2em;padding:0;position:relative}.pagination .pagination-item{position:relative;display:block;height:3em;line-height:3em;padding:0 1em;text-align:center;text-decoration:none;font-weight:700;color:#363740;border:1px solid #36D995;border-radius:4em;z-index:60}.pagination .pagination-item i{position:relative}@media only screen and (max-width: 30em){.pagination .pagination-item{width:4em;height:4em;line-height:4em;margin-top:-.5em;padding:0!important}.pagination .pagination-item i{font-size:1.5em}.pagination .pagination-item>span{display:none}}.pagination .pagination-prev{float:right}.pagination .pagination-prev i{right:-.05em}.pagination .pagination-info{display:block;left:0;top:0;height:3em;line-height:3em;position:absolute;text-align:center;width:100%;z-index:50;color:#9D9FA6}#loader-wrapper{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1000}#loader{display:block;position:relative;left:50%;top:50%;width:150px;height:150px;margin:-75px 0 0 -75px;border-radius:50%;border:3px solid transparent;border-top-color:#36D995;animation:spin 2s linear infinite}#loader:before{content:"";position:absolute;top:5px;left:5px;right:5px;bottom:5px;border-radius:50%;border:3px solid transparent;border-top-color:#2DB77E;animation:spin 3s linear infinite}#loader:after{content:"";position:absolute;top:15px;left:15px;right:15px;bottom:15px;border-radius:50%;border:3px solid transparent;border-top-color:#D4D5D9;animation:spin 1.5s linear infinite}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+</style>
+
+
+    </head>
+    <body class="home-template">
+      <div id="loader-wrapper">
+        <div id="loader"></div>
+      </div>
+      <section id="wrapper" style="display: none;">
+        <div id="ajax-container">
+          <nav id="nav" class="nav">
+            <div class="nav-logo">
+              <a href="http://dafian47.gitlab.io/blog">
+      			  
+              </a>
+            </div>
+            <div class="nav-menu">
+              <a class="rss" href="">
+                <i class="icon-rss"></i>
+              </a>
+                
+                <a class="menu" data-action="toc" data-target="toc"><i class="icon-location"></i></a>
+                
+                
+            </div>
+          </nav>
+
+
+<main class="content" role="main">
+	<article class="post">
+		<div class="inner">
+
+			<div id="push">
+
+  			<header class="post-header">
+  				<span class="post-meta">
+						<span class="post-date">5 Jul 2017</span> <span class="reading-time">| <span class="estimated-reading-time">5 min.</span> (<span class="word-count">957</span> words)</span></span>
+  				</span>
+  				<div class="clear"></div>
+  				<h1 class="post-title">Menggunakan SourceTree</h1>
+  			</header>
+
+  			<section class="post-content">
+  				
+
+<h1 id="register-akun-atlassian">Register Akun Atlassian</h1>
+
+<p>Register Akun Atlassian <a href="https://www.atlassian.com/">disini</a>. Gunakan akun email Anda.</p>
+
+<h1 id="instalasi-sourcetree">Instalasi SourceTree</h1>
+
+<p>Berikut panduan singkat instalasi SourceTree.
+* Buka website <a href="https://www.sourcetreeapp.com/">SourceTree</a> dan klik tombol Download
+* Setelah selesai didownload, buka file tersebut (EXE untuk Windows atau DMG untuk Mac)
+* Klik tombol <strong>Use an existing account</strong> untuk login menggunakan akun Atlassian. Bila belum klik tombol <strong>Go to My Atlassian</strong> dan ikuti petunjuknya untuk membuat akun baru. Gunakan akun email Anda, karena bisa digunakan untuk login Bitbucket.</p>
+
+<p><img src="pic/sourcetree-install.png" alt="Halaman Instalasi Awal SourceTree" /></p>
+
+<ul>
+<li>Ketika ada pilihan untuk menambahkan repo, klik tombol <strong>Skip Setup</strong> karena kita akan menggunakan GitLab sebagai Servernya.</li>
+</ul>
+
+<p><img src="pic/sourcetree-add-repo.png" alt="Halaman Menambahkan Repo" /></p>
+
+<ul>
+<li>Setelah sudah, kita kan lanjut untuk menambahkan remote mulai dari lokal kita.</li>
+</ul>
+
+<h1 id="pembuatan-ssh-key-untuk-gitlab">Pembuatan SSH Key untuk GitLab</h1>
+
+<p>Sebelumnya kita kan membuat SSH Key yang digunakan untuk <em>Otentifikasi</em> antara Local dan Server GitLab melalui akun GitLab kita. Cara nya sebagai berikut:</p>
+
+<ul>
+<li>Klik akun GitLab kita di pojok kanan atas, kemudian pilih Settings</li>
+<li>Buka tab SSH Keys, klik link <em>generate it</em> dan buka di tab baru.</li>
+</ul>
+
+<pre><code>$ cat ~/.ssh/id_rsa.pub
+</code></pre>
+
+<ul>
+<li>Jalankan perintah di Terminal bila menggunakan Mac dan di Git Bash bila menggunakan Windows. Bila belum ada maka kita kan mengenerate nya.</li>
+</ul>
+
+<pre><code>$ ssh-keygen -t rsa -C &quot;your.email@domain.com&quot; -b 4096
+</code></pre>
+
+<p>Jalankan perintah tersebut untuk mengenerate SSH Key. Gunakan akun email Anda yang sama dengan akun GitLab.
+Kemudian anda akan ditanyakan letak file RSA nya. Tekan Enter untuk membiarkannya default. Tekan Enter terus hingga selesai. Setelah selesai, jalankan perintah sebelumnya maka akan tampil seperti ini.</p>
+
+<pre><code>$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDgR8Vr1AOa0xsnHRZHXBbDTPb5YClq9pcJJ34yWU3qP3uMFub4oGcWhl+8XJzavA8pffETTn1qHTg/0v7N1Z4UgbQAGCM3JGMmjCbygc7V9SGTmj6+yHnRPl7kH4DnIO6i2txfc13pofdV9f12tsfx7fWJ9W4Xhe6IITPCWGz2u8YPFXlaZQUM4L1n8xiJZAADtwUS4ft8Bzjl1/4Lr55weYjqmWhmNH9AvbonpiAVKdr2VjT627y3lcauaHmakxZXk+s6BzA5ciQoK5eZWEBrG5NlMy7J2OmNU6Pt/CSecQk/iNm0QCgiaVMkEI0M7SXMensYmDSDdTT5Lau2QOzV your.email@domain.com
+</code></pre>
+
+<ul>
+<li>Copy mulai dari ssh-rsa hingga akun email kita. Dan paste di Halaman SSH-Key. Misalnya seperti ini. Dan klik tombol Add Key.</li>
+</ul>
+
+<p><img src="pic/page-ssh-key.png" alt="Halaman SSH Key" /></p>
+
+<ul>
+<li>Setelah selesai kita siap menggunakan integrasi antara GitLab &amp; SourceTree :)</li>
+</ul>
+
+<h1 id="menambahkan-remote-ke-existing-project">Menambahkan Remote ke Existing Project</h1>
+
+<p>Dalam aktivitas biasanya kita sudah membangun project kita. Seperti membuat aplikasi Android dengan Android Studio, aplikasi iOS dengan XCode, aplikasi Java dengan Spring MVC dan lainnya. Untuk hal itu kita kan membuat sample project.</p>
+
+<ul>
+<li>Buatlah sebuah folder dengan nama <strong>DemoGit</strong></li>
+</ul>
+
+<pre><code>$ cd root-path/
+$ mkdir DemoGit
+</code></pre>
+
+<ul>
+<li>Buatlah sebuah file markdown dengan nama file <strong>README.md</strong>. File ini berguna untuk deskripsi detail project kita. Sangat disarankan setiap project disertakan file tersebut untuk memudahkan developer lainnya ketika kerja tim.</li>
+</ul>
+
+<pre><code>$ cd DemoGit/
+$ touch README.md
+</code></pre>
+
+<ul>
+<li>Isikan file README.md kita. Misalnya seperti ini.</li>
+</ul>
+
+<p><img src="pic/file-readme.png" alt="File README.md" /></p>
+
+<ul>
+<li>Setelah itu jalankan perintah berikut untuk membuat repo lokal</li>
+</ul>
+
+<pre><code>$ git init
+Initialized empty Git repository in /Users/dafian/Documents/DataDafi/Workspace/doc/DemoGit/.git/
+</code></pre>
+
+<ul>
+<li>Tambahkan remote server GitLab project DemoGit kita dengan perintah berikut</li>
+</ul>
+
+<pre><code>$ git remote add origin git@gitlab.com:blog-development/DemoGit.git
+</code></pre>
+
+<ul>
+<li>Tambahkan semua file agar dapat di <code>commit</code> dan di <code>push</code> ke server</li>
+</ul>
+
+<pre><code>$ git add .
+</code></pre>
+
+<ul>
+<li><code>commit</code> semua perubahan dengan perintah berikut</li>
+</ul>
+
+<pre><code>$ git commit -m &quot;Initial Commit&quot;
+[master (root-commit) ed6fcfe] Initial commit
+ 1 file changed, 4 insertions(+)
+ create mode 100644 README.md
+</code></pre>
+
+<ul>
+<li>Dan yang terakhir <code>push</code> repo lokal kita ke repo server di GitLab</li>
+</ul>
+
+<pre><code>$ git push -u origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 244 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To gitlab.com:blog-development/DemoGit.git
+ * [new branch]      master -&gt; master
+Branch master set up to track remote branch master from origin.
+</code></pre>
+
+<ul>
+<li>Buka halaman project Git kita tadi yang bernama DemoGit. Maka tampilannya kan seperti ini</li>
+</ul>
+
+<p><img src="pic/page-first-commit.png" alt="Halaman DemoGit yang Baru" /></p>
+
+<h1 id="panduan-singkat-sourcetree">Panduan Singkat SourceTree</h1>
+
+<p>Dalam kerja sama tim, kadang kala kita membantu developer lainnya. Dan kita harus mengkloning repo yang di server ke lokal kita. Berikut panduannya.</p>
+
+<h3 id="clone-repo-dari-gitlab-ke-lokal">Clone Repo dari GitLab ke Lokal</h3>
+
+<ul>
+<li>Copy url SSH project yang akan di kloning. Dalam contoh berikut adalah project DemoGit.</li>
+</ul>
+
+<blockquote>
+<p>Contoh URL : git@gitlab.com:blog-development/DemoGit.git</p>
+</blockquote>
+
+<ul>
+<li>Buka SourceTree dan klik tombol New+</li>
+</ul>
+
+<p><img src="pic/sourcetree-home.png" alt="Tampilan Awal SourceTree" /></p>
+
+<ul>
+<li>Pilih menu <strong>Clone from URL</strong></li>
+</ul>
+
+<p><img src="pic/sourcetree-menu-clone.png" alt="Tampilan Menu SourceTree" /></p>
+
+<ul>
+<li>Paste url SSH tadi di <strong>Source URL:</strong>. Ganti letak project di <strong>Destination Path:</strong>. Anda bisa mengganti nama project di <strong>Name:</strong>. Tunggu hingga muncul tulisan <strong>This is Git Repository</strong>. Setelah itu klik tombol Done.</li>
+</ul>
+
+<p><img src="pic/sourcetree-clone-repo.png" alt="Tampilan Kloning Repo" /></p>
+
+<ul>
+<li>Setelah selesai Repo disinkron, maka akan tampil sebagai berikut.</li>
+</ul>
+
+<p><img src="pic/sourcetree-lokal-repo.png" alt="Tampilan Kloning Repo" /></p>
+
+<h3 id="push-repo-dari-lokal-ke-gitlab">Push Repo dari Lokal ke GitLab</h3>
+
+<p>Contoh kali ini kita kan melakukan <code>push</code> perubahan di lokal kita ke server.</p>
+
+<ul>
+<li>Sebagai contoh, edit isi file <strong>README.md</strong>. Tambahkan nama Anda di dalamnya.</li>
+<li>Setelah selesa, buka SourceTree kembali dan pilih Project nya. Maka akan tampil perubahan seperti ini.</li>
+</ul>
+
+<p><img src="pic/sourcetree-uncommited-file.png" alt="Tampilan SourceTree Ketika Ada Perubahan File" /></p>
+
+<ul>
+<li>Lakukan <code>commit</code> pada perubahan dengan cara klik tombol <strong>Commit</strong> di pojok kiri atas. Kemudian kan tampil seperti ini.</li>
+</ul>
+
+<p><img src="pic/sourcetree-commit-file.png" alt="Tampilan SourceTree Ketika Akan Melakukan Commit" /></p>
+
+<ul>
+<li>Centang file yang akan di <code>commit</code>. Bila terdapat ikon tanda tanya, artinya file tersebut baru dan harus di centang untuk menambahkanya ke repo lokal. Isikan deskripsi di kotak dibawah nama kita. Kemudian tekan tombol <strong>Commit</strong>.</li>
+</ul>
+
+<p><img src="pic/sourcetree-unpush-file.png" alt="Tampilan SourceTree Ketika Ada File yang Belum Di Add" /></p>
+
+<ul>
+<li>Sampai sini kita sudah menyimpan di repo lokal kita. Di SourceTree terlihat ada ikon <code>1 ahead</code> yang berarti perubahan repo lokal kita terdapat satu yang baru dibandingkan repo server. Untuk melakukan sinkroni nya. Tekan tombol <strong>Push</strong>. Kemudian tampil dialog sebagai berikut.</li>
+</ul>
+
+<p><img src="pic/sourcetree-dialog-push.png" alt="Tampilan SourceTree Ketika Akan Melakukan Push" /></p>
+
+<ul>
+<li>Pastikan checkbox di dalam kotak master dicentang seperti contoh. Untuk melakukan branch mana yang akan disinkronisasi. Setelah itu klik tombol <strong>OK</strong>. Maka tidak akan ada ikon lagi. Dan periksa di Website GitLab. Apakah sudah berubah file README.md kita.</li>
+</ul>
+
+<h3 id="pull-repo-dari-gitlab-ke-lokal">Pull Repo dari GitLab ke Lokal</h3>
+
+<p>Contoh kali ini kita kan melakukan <code>pull</code> dari server ke lokal. Tambahkan File LICENSE dengan cara klik tombol <strong>Add Lincese</strong>. Pilih salah satu template, dalam hal ini menggunakan template License MIT.</p>
+
+<ul>
+<li>Buka SourceTree, dan buka project DemoGit. Maka akan tampil ikon <code>1 behind</code>, bila belum klik tombol <strong>Fetch</strong> untuk mengecek perubahan di server.</li>
+</ul>
+
+<p><img src="pic/sourcetree-unpull-file.png" alt="Tampilan SourceTree Ketika Ada Perubahan Baru di Server" /></p>
+
+<ul>
+<li>Kita akan melakukan sinkronisasi repo lokal dari repo server. Klik tombol <strong>Pull</strong>. Maka akan tampil dialog sebagai berikut.</li>
+</ul>
+
+<p><img src="pic/sourcetree-dialog-pull.png" alt="Tampilan SourceTree Ketika Ada Perubahan Baru di Server" /></p>
+
+<ul>
+<li>Biarkan secara default, kemudian klik tombol <strong>OK</strong>. Selesai</li>
+</ul>
+
+<h3 id="penggunaan-tag">Penggunaan Tag</h3>
+
+<p>Penggunaan Tag bisa berguna untuk menentukan versi rilisan. Sebagai contoh pada Android dan iOS, versi rilis <code>1.3.0</code>. Dalam <em>Source Code</em> bisa gunakan Tag <code>1.3.0</code> sebagai pengingat bahwa <em>Source Code</em> dengan Tag tsb menunjuk pada versi rilis yang sama.</p>
+
+<p>Cara nya klik salah satu <code>commit</code> kita yg bersifat final. Disarankan di branch <em>master</em>. Klik kanan, pilih <strong>Tag&hellip;</strong> dan masukan nama Tag di <strong>Tag Name</strong>. Kemudian klik tombol <strong>Add</strong>.</p>
+
+<h1 id="referensi">Referensi</h1>
+
+<ul>
+<li><a href="https://confluence.atlassian.com/get-started-with-sourcetree/get-started-with-sourcetree-847359026.html">SourceTree Documentation</a></li>
+<li><a href="https://gitlab.com/help/ssh/README">GitLab SSH Key Documentation</a></li>
+</ul>
+
+  			</section>
+
+  			<footer class="post-footer">
+  				<div class="post-tags">
+            
+            
+                <a href="http://dafian47.gitlab.io/blogtags/sourcetree/">sourcetree</a>
+            
+                <a href="http://dafian47.gitlab.io/blogtags/git/">git</a>
+            
+            
+  				</div>
+  				<div class="post-share">
+  					<a class="icon-twitter" href="https://twitter.com/share?text=Menggunakan%20SourceTree&url=http%3a%2f%2fdafian47.gitlab.io%2fblog%2fpost%2fusing-sourcetree%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  						<span>Twitter</span>
+  					</a>
+  					<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fdafian47.gitlab.io%2fblog%2fpost%2fusing-sourcetree%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  						<span>Facebook</span>
+  					</a>
+  					<a class="icon-gplus" href="https://plus.google.com/share?url=http%3a%2f%2fdafian47.gitlab.io%2fblog%2fpost%2fusing-sourcetree%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+  						<span>Google+</span>
+  					</a>
+  				</div>
+  			</footer>
+
+  			<aside class="post-comments">
+    
+    
+    
+</aside>
+
+
+			</div>
+
+			<nav class="post-nav">
+				
+				
+					<a class="post-nav-item post-nav-prev" href="http://dafian47.gitlab.io/blog/post/manage-conflict/">
+						<section class="post-nav-teaser">
+							<span class="post-nav-icon"><i class="icon-arrow-right"></i></span>
+							<span class="post-nav-info">
+								<h4 class="post-nav-title">Manajemen Konflik Git</h4>
+								<p class="post-nav-excerpt">Dalam kerja tim, seringkali terdapat file yang sama-sama digunakan&hellip;</p>
+							</span>
+						</section>
+					</a>
+				
+				<div class="clear"></div>
+			</nav>
+
+		</div>
+	</article>
+</main>
+
+				<div id="body-class" style="display: none;"></div>
+				<footer id="footer">
+					<section class="credits">
+						<span class="credits-theme">Theme <a href="https://github.com/zenithar/hugo-theme-bleak" target="_blank" rel="nofollow">Bleak</a> by <a href="http://zutrinken.com" target="_blank" rel="nofollow">zutrinken</a></span>
+						<span class="credits-software">Published with <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a></span>
+					</section>
+				</footer>
+				
+				
+<div id="tocMenu" data-target="toc">
+    <div class="menu-header">
+        <span class="menu-label">Menu</span>
+        <a class="menu-close" data-action="toc" data-target="toc"></a>
+    </div>
+    <div id="toc" class="menu-list">
+        <nav id="TableOfContents">
+<ul>
+<li><a href="#register-akun-atlassian">Register Akun Atlassian</a></li>
+<li><a href="#instalasi-sourcetree">Instalasi SourceTree</a></li>
+<li><a href="#pembuatan-ssh-key-untuk-gitlab">Pembuatan SSH Key untuk GitLab</a></li>
+<li><a href="#menambahkan-remote-ke-existing-project">Menambahkan Remote ke Existing Project</a></li>
+<li><a href="#panduan-singkat-sourcetree">Panduan Singkat SourceTree</a>
+<ul>
+<li>
+<ul>
+<li><a href="#clone-repo-dari-gitlab-ke-lokal">Clone Repo dari GitLab ke Lokal</a></li>
+<li><a href="#push-repo-dari-lokal-ke-gitlab">Push Repo dari Lokal ke GitLab</a></li>
+<li><a href="#pull-repo-dari-gitlab-ke-lokal">Pull Repo dari GitLab ke Lokal</a></li>
+<li><a href="#penggunaan-tag">Penggunaan Tag</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#referensi">Referensi</a></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+
+				<div class="overlay"></div>
+			</div>
+		</section>
+
+    <script async src="http://dafian47.gitlab.io/blogjs/main.js"></script>
+
+
+
+
+  <noscript><link rel="stylesheet" href="http://dafian47.gitlab.io/blogcss/main.css"></noscript>
+</body>
+</html>
+

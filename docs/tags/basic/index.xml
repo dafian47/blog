@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Basic on My Personal Blog</title>
+    <link>http://dafian47.gitlab.io/blog/tags/basic/index.xml</link>
+    <description>Recent content in Basic on My Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://dafian47.gitlab.io/blog/tags/basic/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Git Basic</title>
+      <link>http://dafian47.gitlab.io/blog/post/git-basic/</link>
+      <pubDate>Wed, 05 Jul 2017 16:28:00 +0200</pubDate>
+      
+      <guid>http://dafian47.gitlab.io/blog/post/git-basic/</guid>
+      <description>
+
+&lt;h1 id=&#34;dasar-git&#34;&gt;Dasar Git&lt;/h1&gt;
+
+&lt;p&gt;Git adalah &lt;em&gt;tools&lt;/em&gt; yang berfungsi sebagai &lt;em&gt;Version Control System (VCS)&lt;/em&gt; dan kalau diartikan ke bahasa kita artinya sebuah sistem pelacak perubahan pada file. Git sendiri dibuat oleh orang yang menciptakan &lt;em&gt;Kernel Linux&lt;/em&gt;, yup&amp;hellip; tidak salah lagi dia adalah yang mulia &lt;strong&gt;Linus Torvalds&lt;/strong&gt;. Pada awalnya Git digunakan untuk membantu pengembangan Kernel Linux sebelum akhirnya dipakai lebih luas di berbagai pengembangan software lainnya dan dibuat &lt;em&gt;Multi-Platform&lt;/em&gt; sehingga tersedia di hampir semua OS. Selain Git ada beberapa alternatif lain dari sistem VCS, contohnya: Subversion, Mercurial, CVS, dll.&lt;/p&gt;
+
+&lt;h1 id=&#34;kenapa-pakai-git&#34;&gt;Kenapa Pakai Git&lt;/h1&gt;
+
+&lt;p&gt;Kenapa Git penting untuk tim developer? Dengan menggunakan Git, setiap orang dalam sebuah tim dapat melakukan perubahan pada &lt;em&gt;Source Code&lt;/em&gt; tanpa harus takut terjadi bentrok ataupun kesulitan dalam menggabungkan hasil perubahan yang mereka lakukan. Dengan menggunakan Git, setiap perubahan pada source-code akan terlacak pesan perubahannya, apa saja yang diubah, siapa yang mengubah dan kapan waktunya.&lt;/p&gt;
+
+&lt;p&gt;Link download Git &lt;a href=&#34;https://git-scm.com/downloads&#34;&gt;Disini&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika sudah di Instal, maka Anda dapat mengecek nya dengan cara:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git version
+git version 2.11.0 (Apple Git-81)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;setup-git&#34;&gt;Setup Git&lt;/h1&gt;
+
+&lt;p&gt;Sekarang anda telah memiliki Git pada sistem anda, berikutnya anda akan harus melakukan beberapa penyesuai pada lingkungan Git anda. Anda hanya perlu melakukan hal ini sekali saja pada saat memperbaharui versi Git anda, penyesuai tidak perlu dilakukan lagi. Anda pun dapat mengubah penyesuaian tersebut setiap saat.&lt;/p&gt;
+
+&lt;h3 id=&#34;identitas-anda&#34;&gt;Identitas Anda&lt;/h3&gt;
+
+&lt;p&gt;Hal pertama yang harus anda lakukan ketika menginstalkan Git adalah mengatur username dan alamat e-mail anda. Hal ini penting karena setiap commit pada Git akan menggunakan informasi ini, dan informasi ini akan selamanya disimpan dengan commit yang anda buat tersebut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git config --global user.name &amp;quot;M Rizki Dafianto&amp;quot;
+$ git config --global user.email dafian47@gmail.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;mengecek-settingan-git&#34;&gt;Mengecek Settingan Git&lt;/h3&gt;
+
+&lt;p&gt;Jika anda ingin mengecek settingan anda, anda dapat menggunakan peritah git config &amp;ndash;list untuk menampilkan semua settingan yang digunakan Git:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git config --list
+user.name=M Rizki Dafianto
+user.email=dafian47@gmail.com
+core.autocrlf=input
+core.excludesfile=/Users/dafian/.gitignore_global
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;perintah-dasar-git&#34;&gt;Perintah Dasar Git&lt;/h1&gt;
+
+&lt;p&gt;Perintah-perintah dasar dari Git yang paling sering digunakan dan wajib kita kuasai yaitu: &lt;code&gt;git init&lt;/code&gt;, &lt;code&gt;git status&lt;/code&gt;, &lt;code&gt;git add&lt;/code&gt;, &lt;code&gt;git commit&lt;/code&gt;, &lt;code&gt;git pull / push&lt;/code&gt;, &lt;code&gt;git checkout&lt;/code&gt;, &lt;code&gt;git diff&lt;/code&gt;, &lt;code&gt;git merge&lt;/code&gt;, &lt;code&gt;git remote&lt;/code&gt; dan &lt;code&gt;git reset&lt;/code&gt;. Sebetulnya masih banyak fungsi lain dari Git untuk kasus-kasus tertentu tapi mungkin perintah yang telah disebutkan sebelumnya yang akan paling sering kita gunakan, berikut ini adalah penjelasan singkatnya:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git init&lt;/code&gt; untuk membuat repo lokal baru pada perintah ini akan dibuat sebuah folder baru yang bernama &amp;ldquo;.git&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git status&lt;/code&gt; untuk melihat status dari repo lokal&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git add&lt;/code&gt; untuk menambahkan file ke dalam repo yang sebelumnya sudah dibuat&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git commit&lt;/code&gt; untuk menyimpan seluruh perubahan yang terjadi&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git pull / push&lt;/code&gt; untuk menyimpan dan mengambil data dari remote repo&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git checkout&lt;/code&gt; untuk pindah branch&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git diff&lt;/code&gt; untuk membandingkan perubahan file&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git merge&lt;/code&gt; untuk melakukan penggabungan antar branch&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git remote&lt;/code&gt; untuk menambahkan remote repo baru&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git reset&lt;/code&gt; untuk membatalkan perubahan pada repo lokal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;contoh-penerapan-git&#34;&gt;Contoh Penerapan Git&lt;/h1&gt;
+
+&lt;p&gt;Berikut ini adalah contoh kasus penggunaan Git pada sebuah folder:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd /folder-project
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pertama masuk terlebih dahulu ke folder &lt;em&gt;Source Code&lt;/em&gt; yang ingin ditambahkan ke Git.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah &lt;code&gt;git init&lt;/code&gt; selesai maka akan muncul sebuah folder baru yang bernama &amp;ldquo;.git&amp;rdquo;, disinilah seluruh hal yang berhubungan dengan Git akan tersimpan.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git add
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Berikutnya kita akan menambahkan seluruh file yang ada didalam folder.&lt;/p&gt;
+
+&lt;p&gt;Pada tahap ini file yang ditambahkan belum benar-benar masuk ke repo, perintah &lt;code&gt;git add&lt;/code&gt; hanya memberi tanda pada file agar ditambahkan pada &lt;code&gt;git commit&lt;/code&gt; berikutnya. Untuk melihat file apa saja yang akan ditambahkan ketik perintah berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git status
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Apabila telah yakin dengan perubahan yang dilakukan maka kita bisa melakukan git commit untuk menyimpan perubahan ke repo dengan perintah berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git commit -m &amp;quot;Initial Commit&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pesan pada &lt;code&gt;git commit&lt;/code&gt; harus dibuat dengan singkat dan jelas untuk mempermudah developer lain dalam memahami apa yang terjadi didalam commit tersebut. Hal ini akan berguna ketika terjadi konflik pada proses merge.&lt;/p&gt;
+
+&lt;h3 id=&#34;contoh-yang-disarankan&#34;&gt;Contoh yang Disarankan&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;update new mail config on config.php&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;remove unused code on SiteController.php&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;revert changes on last commit because of bug on xxxxx&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;contoh-yang-tidak-jelas-dan-tidak-disarankan&#34;&gt;Contoh yang Tidak Jelas dan Tidak Disarankan&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;updates&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;commit&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;add some item&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;remote-repository&#34;&gt;Remote Repository&lt;/h1&gt;
+
+&lt;p&gt;Remote repository atau remote repo adalah tempat penyimpanan Git yang berada di cloud. Beberapa layanan yang terpopuler adalah &lt;a href=&#34;https://github.com/&#34;&gt;GitHub&lt;/a&gt;, &lt;a href=&#34;https://bitbucket.org/&#34;&gt;Bitbucket&lt;/a&gt; dan &lt;a href=&#34;https://gitlab.com/&#34;&gt;GitLab&lt;/a&gt;. Untuk development kita menggunakan GitLab sebagai remote repo karena kita bisa membuat private repo dan team pada layanan gratisnya, sementara GitHub tidak.&lt;/p&gt;
+
+&lt;h1 id=&#34;referensi&#34;&gt;Referensi&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com/book/id/&#34;&gt;https://git-scm.com/book/id/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.coldev.co/&#34;&gt;http://blog.coldev.co/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

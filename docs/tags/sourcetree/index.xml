@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sourcetree on My Personal Blog</title>
+    <link>http://dafian47.gitlab.io/blog/tags/sourcetree/index.xml</link>
+    <description>Recent content in Sourcetree on My Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://dafian47.gitlab.io/blog/tags/sourcetree/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Menggunakan SourceTree</title>
+      <link>http://dafian47.gitlab.io/blog/post/using-sourcetree/</link>
+      <pubDate>Wed, 05 Jul 2017 16:54:24 +0200</pubDate>
+      
+      <guid>http://dafian47.gitlab.io/blog/post/using-sourcetree/</guid>
+      <description>
+
+&lt;h1 id=&#34;register-akun-atlassian&#34;&gt;Register Akun Atlassian&lt;/h1&gt;
+
+&lt;p&gt;Register Akun Atlassian &lt;a href=&#34;https://www.atlassian.com/&#34;&gt;disini&lt;/a&gt;. Gunakan akun email Anda.&lt;/p&gt;
+
+&lt;h1 id=&#34;instalasi-sourcetree&#34;&gt;Instalasi SourceTree&lt;/h1&gt;
+
+&lt;p&gt;Berikut panduan singkat instalasi SourceTree.
+* Buka website &lt;a href=&#34;https://www.sourcetreeapp.com/&#34;&gt;SourceTree&lt;/a&gt; dan klik tombol Download
+* Setelah selesai didownload, buka file tersebut (EXE untuk Windows atau DMG untuk Mac)
+* Klik tombol &lt;strong&gt;Use an existing account&lt;/strong&gt; untuk login menggunakan akun Atlassian. Bila belum klik tombol &lt;strong&gt;Go to My Atlassian&lt;/strong&gt; dan ikuti petunjuknya untuk membuat akun baru. Gunakan akun email Anda, karena bisa digunakan untuk login Bitbucket.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;pic/sourcetree-install.png&#34; alt=&#34;Halaman Instalasi Awal SourceTree&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ketika ada pilihan untuk menambahkan repo, klik tombol &lt;strong&gt;Skip Setup&lt;/strong&gt; karena kita akan menggunakan GitLab sebagai Servernya.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;pic/sourcetree-add-repo.png&#34; alt=&#34;Halaman Menambahkan Repo&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Setelah sudah, kita kan lanjut untuk menambahkan remote mulai dari lokal kita.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;pembuatan-ssh-key-untuk-gitlab&#34;&gt;Pembuatan SSH Key untuk GitLab&lt;/h1&gt;
+
+&lt;p&gt;Sebelumnya kita kan membuat SSH Key yang digunakan untuk &lt;em&gt;Otentifikasi&lt;/em&gt; antara Local dan Server GitLab melalui akun GitLab kita. Cara nya sebagai berikut:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Klik akun GitLab kita di pojok kanan atas, kemudian pilih Settings&lt;/li&gt;
+&lt;li&gt;Buka tab SSH Keys, klik link &lt;em&gt;generate it&lt;/em&gt; dan buka di tab baru.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cat ~/.ssh/id_rsa.pub
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Jalankan perintah di Terminal bila menggunakan Mac dan di Git Bash bila menggunakan Windows. Bila belum ada maka kita kan mengenerate nya.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ ssh-keygen -t rsa -C &amp;quot;your.email@domain.com&amp;quot; -b 4096
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jalankan perintah tersebut untuk mengenerate SSH Key. Gunakan akun email Anda yang sama dengan akun GitLab.
+Kemudian anda akan ditanyakan letak file RSA nya. Tekan Enter untuk membiarkannya default. Tekan Enter terus hingga selesai. Setelah selesai, jalankan perintah sebelumnya maka akan tampil seperti ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDgR8Vr1AOa0xsnHRZHXBbDTPb5YClq9pcJJ34yWU3qP3uMFub4oGcWhl+8XJzavA8pffETTn1qHTg/0v7N1Z4UgbQAGCM3JGMmjCbygc7V9SGTmj6+yHnRPl7kH4DnIO6i2txfc13pofdV9f12tsfx7fWJ9W4Xhe6IITPCWGz2u8YPFXlaZQUM4L1n8xiJZAADtwUS4ft8Bzjl1/4Lr55weYjqmWhmNH9AvbonpiAVKdr2VjT627y3lcauaHmakxZXk+s6BzA5ciQoK5eZWEBrG5NlMy7J2OmNU6Pt/CSecQk/iNm0QCgiaVMkEI0M7SXMensYmDSDdTT5Lau2QOzV your.email@domain.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Copy mulai dari ssh-rsa hingga akun email kita. Dan paste di Halaman SSH-Key. Misalnya seperti ini. Dan klik tombol Add Key.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;pic/page-ssh-key.png&#34; alt=&#34;Halaman SSH Key&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Setelah selesai kita siap menggunakan integrasi antara GitLab &amp;amp; SourceTree :)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;menambahkan-remote-ke-existing-project&#34;&gt;Menambahkan Remote ke Existing Project&lt;/h1&gt;
+
+&lt;p&gt;Dalam aktivitas biasanya kita sudah membangun project kita. Seperti membuat aplikasi Android dengan Android Studio, aplikasi iOS dengan XCode, aplikasi Java dengan Spring MVC dan lainnya. Untuk hal itu kita kan membuat sample project.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Buatlah sebuah folder dengan nama &lt;strong&gt;DemoGit&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd root-path/
+$ mkdir DemoGit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Buatlah sebuah file markdown dengan nama file &lt;strong&gt;README.md&lt;/strong&gt;. File ini berguna untuk deskripsi detail project kita. Sangat disarankan setiap project disertakan file tersebut untuk memudahkan developer lainnya ketika kerja tim.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd DemoGit/
+$ touch README.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Isikan file README.md kita. Misalnya seperti ini.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;pic/file-readme.png&#34; alt=&#34;File README.md&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Setelah itu jalankan perintah berikut untuk membuat repo lokal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git init
+Initialized empty Git repository in /Users/dafian/Documents/DataDafi/Workspace/doc/DemoGit/.git/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Tambahkan remote server GitLab project DemoGit kita dengan perintah berikut&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git remote add origin git@gitlab.com:blog-development/DemoGit.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Tambahkan semua file agar dapat di &lt;code&gt;commit&lt;/code&gt; dan di &lt;code&gt;push&lt;/code&gt; ke server&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git add .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;commit&lt;/code&gt; semua perubahan dengan perintah berikut&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git commit -m &amp;quot;Initial Commit&amp;quot;
+[master (root-commit) ed6fcfe] Initial commit
+ 1 file changed, 4 insertions(+)
+ create mode 100644 README.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Dan yang terakhir &lt;code&gt;push&lt;/code&gt; repo lokal kita ke repo server di GitLab&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git push -u origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 244 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To gitlab.com:blog-development/DemoGit.git
+ * [new branch]      master -&amp;gt; master
+Branch master set up to track remote branch master from origin.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Buka halaman project Git kita tadi yang bernama DemoGit. Maka tampilannya kan seperti ini&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;pic/page-first-commit.png&#34; alt=&#34;Halaman DemoGit yang Baru&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;panduan-singkat-sourcetree&#34;&gt;Panduan Singkat SourceTree&lt;/h1&gt;
+
+&lt;p&gt;Dalam kerja sama tim, kadang kala kita membantu developer lainnya. Dan kita harus mengkloning repo yang di server ke lokal kita. Berikut panduannya.&lt;/p&gt;
+
+&lt;h3 id=&#34;clone-repo-dari-gitlab-ke-lokal&#34;&gt;Clone Repo dari GitLab ke Lokal&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Copy url SSH project yang akan di kloning. Dalam contoh berikut adalah project DemoGit.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Contoh URL : git@gitlab.com:blog-development/DemoGit.git&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Buka SourceTree dan klik tombol New+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;pic/sourcetree-home.png&#34; alt=&#34;Tampilan Awal SourceTree&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Pilih menu &lt;strong&gt;Clone from URL&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;pic/sourcetree-menu-clone.png&#34; alt=&#34;Tampilan Menu SourceTree&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Paste url SSH tadi di &lt;strong&gt;Source URL:&lt;/strong&gt;. Ganti letak project di &lt;strong&gt;Destination Path:&lt;/strong&gt;. Anda bisa mengganti nama project di &lt;strong&gt;Name:&lt;/strong&gt;. Tunggu hingga muncul tulisan &lt;strong&gt;This is Git Repository&lt;/strong&gt;. Setelah itu klik tombol Done.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;pic/sourcetree-clone-repo.png&#34; alt=&#34;Tampilan Kloning Repo&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Setelah selesai Repo disinkron, maka akan tampil sebagai berikut.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;pic/sourcetree-lokal-repo.png&#34; alt=&#34;Tampilan Kloning Repo&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;push-repo-dari-lokal-ke-gitlab&#34;&gt;Push Repo dari Lokal ke GitLab&lt;/h3&gt;
+
+&lt;p&gt;Contoh kali ini kita kan melakukan &lt;code&gt;push&lt;/code&gt; perubahan di lokal kita ke server.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sebagai contoh, edit isi file &lt;strong&gt;README.md&lt;/strong&gt;. Tambahkan nama Anda di dalamnya.&lt;/li&gt;
+&lt;li&gt;Setelah selesa, buka SourceTree kembali dan pilih Project nya. Maka akan tampil perubahan seperti ini.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;pic/sourcetree-uncommited-file.png&#34; alt=&#34;Tampilan SourceTree Ketika Ada Perubahan File&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Lakukan &lt;code&gt;commit&lt;/code&gt; pada perubahan dengan cara klik tombol &lt;strong&gt;Commit&lt;/strong&gt; di pojok kiri atas. Kemudian kan tampil seperti ini.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;pic/sourcetree-commit-file.png&#34; alt=&#34;Tampilan SourceTree Ketika Akan Melakukan Commit&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Centang file yang akan di &lt;code&gt;commit&lt;/code&gt;. Bila terdapat ikon tanda tanya, artinya file tersebut baru dan harus di centang untuk menambahkanya ke repo lokal. Isikan deskripsi di kotak dibawah nama kita. Kemudian tekan tombol &lt;strong&gt;Commit&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;pic/sourcetree-unpush-file.png&#34; alt=&#34;Tampilan SourceTree Ketika Ada File yang Belum Di Add&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sampai sini kita sudah menyimpan di repo lokal kita. Di SourceTree terlihat ada ikon &lt;code&gt;1 ahead&lt;/code&gt; yang berarti perubahan repo lokal kita terdapat satu yang baru dibandingkan repo server. Untuk melakukan sinkroni nya. Tekan tombol &lt;strong&gt;Push&lt;/strong&gt;. Kemudian tampil dialog sebagai berikut.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;pic/sourcetree-dialog-push.png&#34; alt=&#34;Tampilan SourceTree Ketika Akan Melakukan Push&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Pastikan checkbox di dalam kotak master dicentang seperti contoh. Untuk melakukan branch mana yang akan disinkronisasi. Setelah itu klik tombol &lt;strong&gt;OK&lt;/strong&gt;. Maka tidak akan ada ikon lagi. Dan periksa di Website GitLab. Apakah sudah berubah file README.md kita.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;pull-repo-dari-gitlab-ke-lokal&#34;&gt;Pull Repo dari GitLab ke Lokal&lt;/h3&gt;
+
+&lt;p&gt;Contoh kali ini kita kan melakukan &lt;code&gt;pull&lt;/code&gt; dari server ke lokal. Tambahkan File LICENSE dengan cara klik tombol &lt;strong&gt;Add Lincese&lt;/strong&gt;. Pilih salah satu template, dalam hal ini menggunakan template License MIT.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Buka SourceTree, dan buka project DemoGit. Maka akan tampil ikon &lt;code&gt;1 behind&lt;/code&gt;, bila belum klik tombol &lt;strong&gt;Fetch&lt;/strong&gt; untuk mengecek perubahan di server.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;pic/sourcetree-unpull-file.png&#34; alt=&#34;Tampilan SourceTree Ketika Ada Perubahan Baru di Server&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Kita akan melakukan sinkronisasi repo lokal dari repo server. Klik tombol &lt;strong&gt;Pull&lt;/strong&gt;. Maka akan tampil dialog sebagai berikut.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;pic/sourcetree-dialog-pull.png&#34; alt=&#34;Tampilan SourceTree Ketika Ada Perubahan Baru di Server&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Biarkan secara default, kemudian klik tombol &lt;strong&gt;OK&lt;/strong&gt;. Selesai&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;penggunaan-tag&#34;&gt;Penggunaan Tag&lt;/h3&gt;
+
+&lt;p&gt;Penggunaan Tag bisa berguna untuk menentukan versi rilisan. Sebagai contoh pada Android dan iOS, versi rilis &lt;code&gt;1.3.0&lt;/code&gt;. Dalam &lt;em&gt;Source Code&lt;/em&gt; bisa gunakan Tag &lt;code&gt;1.3.0&lt;/code&gt; sebagai pengingat bahwa &lt;em&gt;Source Code&lt;/em&gt; dengan Tag tsb menunjuk pada versi rilis yang sama.&lt;/p&gt;
+
+&lt;p&gt;Cara nya klik salah satu &lt;code&gt;commit&lt;/code&gt; kita yg bersifat final. Disarankan di branch &lt;em&gt;master&lt;/em&gt;. Klik kanan, pilih &lt;strong&gt;Tag&amp;hellip;&lt;/strong&gt; dan masukan nama Tag di &lt;strong&gt;Tag Name&lt;/strong&gt;. Kemudian klik tombol &lt;strong&gt;Add&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;referensi&#34;&gt;Referensi&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://confluence.atlassian.com/get-started-with-sourcetree/get-started-with-sourcetree-847359026.html&#34;&gt;SourceTree Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.com/help/ssh/README&#34;&gt;GitLab SSH Key Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

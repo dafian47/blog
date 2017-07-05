@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta property="og:title" content=" Git Basic &middot;  My Personal Blog" />
+        <meta property="og:site_name" content="My Personal Blog" />
+        <meta property="og:url" content="http://dafian47.gitlab.io/blog/post/git-basic/" />
+
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:published_time" content="2017-07-05T16:28:00&#43;02:00" />
+        <meta property="og:article:tag" content="basic" />
+        <meta property="og:article:tag" content="git" />
+        
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@" />
+        <meta name="twitter:creator" content="@" />
+        <meta name="twitter:title" content="Git Basic" />
+        <meta name="twitter:description" content="Git adalah tools yang berfungsi sebagai Version Control System (VCS) dan" />
+        <meta name="twitter:url" content="http://dafian47.gitlab.io/blog/post/git-basic/" />
+    
+
+        <title> Git Basic &middot;  My Personal Blog</title>
+
+        <link rel="preload" href="http://dafian47.gitlab.io/blogjs/main.js" as="script" />
+        <link rel="preload" href="http://dafian47.gitlab.io/blogcss/main.css" as="style" />
+
+    
+        <meta name="description" content="Git adalah tools yang berfungsi sebagai Version Control System (VCS) dan" />
+    
+
+    
+        <meta name="p:domain_verify" content=""/>
+    
+
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        
+        
+
+    
+        <link href="http://dafian47.gitlab.io/blogindex.xml" rel="alternate" type="application/rss+xml" title="My Personal Blog" />
+    
+
+    
+        <link rel="canonical" href="http://dafian47.gitlab.io/blog/post/git-basic/" />
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "http:\/\/dafian47.gitlab.io\/blog\/post\/git-basic\/"
+        },
+        "headline": "Git Basic",
+        "description": "Git adalah tools yang berfungsi sebagai Version Control System (VCS) dan",
+        "author": {
+            "@type": "Person",
+            "name": " ",
+            "url": "http://profiles.google.com/?rel=author",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https:",
+              "height": 80,
+              "width": 80
+            }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "@id": "http:\/\/dafian47.gitlab.io\/blog",
+          "name": "My Personal Blog",
+          "url": "http:\/\/dafian47.gitlab.io\/blog",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https:",
+            "height": 80,
+            "width": 80
+          }
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "http:\/\/dafian47.gitlab.io\/blog\/images\/cover-git.jpg",
+          "height": 133,
+          "width": 200
+        },
+        "datePublished": "2017-07-05",
+        "dateModified": "2017-07-05",
+        "wordCount":  713 ,
+        "keywords": "[\"basic\",\"git\"]" 
+    }
+    </script>
+
+
+    
+    <script type="text/javascript">
+    
+    
+    </script>
+    
+
+    <script type="text/javascript">
+      var config = {
+        baseUrl: "http:\/\/dafian47.gitlab.io\/blog"
+      };
+    </script>
+
+    <style>
+html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,figure,footer,header,main,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figure{margin:1em 40px}a{background-color:transparent;-webkit-text-decoration-skip:objects}img{border-style:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}@font-face{font-family:'Merriweather Sans';font-style:normal;font-weight:300;src:local("Merriweather Sans Light"),local(MerriweatherSans-Light),url(//fonts.gstatic.com/s/merriweathersans/v5/6LmGj5dOJopQKEkt88GowY_zIojJi0m4a5Z6tRh6itY.woff) format("woff")}@font-face{font-family:'Merriweather Sans';font-style:normal;font-weight:400;src:local("Merriweather Sans Regular"),local(MerriweatherSans-Regular),url(//fonts.gstatic.com/s/merriweathersans/v5/AKu1CjQ4qnV8MUltkAX3sL2aU247V0zTzydO4RoO9Ok.woff) format("woff")}@font-face{font-family:'Merriweather Sans';font-style:normal;font-weight:700;src:local("Merriweather Sans Bold"),local(MerriweatherSans-Bold),url(//fonts.gstatic.com/s/merriweathersans/v5/6LmGj5dOJopQKEkt88GowQfd-b-I5PxxcmB4_-MNcqw.woff) format("woff")}@font-face{font-family:'Merriweather Sans';font-style:normal;font-weight:800;src:local("Merriweather Sans ExtraBold"),local(MerriweatherSans-ExtraBold),url(//fonts.gstatic.com/s/merriweathersans/v5/6LmGj5dOJopQKEkt88GowWT7sFQ1Iz1BbpcuCPlgc9Q.woff) format("woff")}@font-face{font-family:'Merriweather Sans';font-style:italic;font-weight:300;src:local("Merriweather Sans Light Italic"),local(MerriweatherSans-LightItalic),url(//fonts.gstatic.com/s/merriweathersans/v5/nAqt4hiqwq3tzCecpgPmVX9UU5BmOJGkLxUCVv5VXdc.woff) format("woff")}@font-face{font-family:'Merriweather Sans';font-style:italic;font-weight:400;src:local("Merriweather Sans Italic"),local(MerriweatherSans-Italic),url(//fonts.gstatic.com/s/merriweathersans/v5/3Mz4hOHzs2npRMG3B1ascf0KIgDhPIHb_R-SWdtqte8.woff) format("woff")}@font-face{font-family:'Merriweather Sans';font-style:italic;font-weight:700;src:local("Merriweather Sans Bold Italic"),local(MerriweatherSans-BoldItalic),url(//fonts.gstatic.com/s/merriweathersans/v5/nAqt4hiqwq3tzCecpgPmVYM8pfYvjMoOxygpzLVILAs.woff) format("woff")}@font-face{font-family:'icons';src:url(http://dafian47.gitlab.io/blog/fonts/icons.eot?9273991);src:url(http://dafian47.gitlab.io/blog/fonts/icons.eot?9273991#iefix) format("embedded-opentype"),url(http://dafian47.gitlab.io/blog/fonts/icons.woff?9273991) format("woff"),url(http://dafian47.gitlab.io/blog/fonts/icons.ttf?9273991) format("truetype"),url(http://dafian47.gitlab.io/blog/fonts/icons.svg?9273991#icons) format("svg");font-weight:400;font-style:normal}[class^="icon-"]:before{font-family:"icons";font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:.2em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;margin-left:.2em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-arrow-right:before{content:'\e807'}.icon-rss:before{content:'\e808'}body{font:300 1em / 1.5em 'Merriweather Sans',sans-serif;color:#595B66}a{color:inherit;text-decoration:none;font-weight:400}h1,h2{text-rendering:optimizeLegibility;color:#1F2026}h2 a{font-weight:inherit}h1{font-size:2em;line-height:1em;margin:2em 0 -.5em}h2{font-size:1.75em;line-height:1.143em;margin:2.286em 0 -.571em}p{margin:2em auto}i{font-weight:400;font-style:italic;color:#363740}img{display:block;max-width:100%;height:auto;margin:2.5em auto}body{background:#fff}.inner{max-width:48em;margin:0 auto;padding:0 1em}#wrapper{position:relative;box-sizing:border-box;width:100%;min-height:100vh;padding-bottom:6em;background:#F2F3F5}#push{transform:translate3d(0,0,0);transform-style:preserve-3d;opacity:1}#nav{position:relative;background:#fff;z-index:70;transform:translate3d(0,0,0);transform-style:preserve-3d;opacity:1}#nav:after{clear:both;content:'';display:table}#nav .nav-logo{float:left;height:2em;padding:1em;max-width:50%}#nav .nav-logo img{width:auto;max-width:none;height:2em;margin:0;border-radius:5px}#nav .nav-menu{float:right}#nav .nav-menu:after{clear:both;content:'';display:table}#nav .nav-menu a{display:block;width:1em;height:1em;line-height:1em;padding:1.5em;text-align:center;float:left}#nav .nav-menu a i:before{margin:auto}.overlay{display:none;position:fixed;left:0;top:0;width:100%;height:100%;z-index:80;display:none}.overlay:before{content:'';position:absolute;left:0;top:0;width:100%;height:100%;background:#1F2026;opacity:0;transform-style:preserve-3d}#header{position:relative;padding:4em 0}#header .inner{position:relative;z-index:2}#header .header-title{display:block;text-align:center}#header .header-name{font-weight:700;letter-spacing:-1px;display:block;line-height:1em;font-size:2em;text-decoration:none;color:#1F2026;padding:0;margin:0}#header.has-cover .header-name{color:#fff}#header .header-description{display:block;margin:1em auto 0;color:#9D9FA6;position:relative;font-weight:300}#header .header-description:after{content:'';position:absolute;height:1px;width:100px;margin-left:-50px;left:50%;top:-.5em;background:#D4D5D9}#header.has-cover .header-description{color:#fff}#header.has-cover .header-description:after{background:#fff}#header .header-cover{position:absolute;width:100%;height:100%;top:0;left:0;margin-top:-4em;padding:4em 0;background:no-repeat fixed center 100% / cover;z-index:1}#header .header-cover:before{content:'';position:absolute;width:100%;height:100%;left:0;top:0;background:rgba(0,0,0,0.2)}#header .header-cover:after{content:'';position:absolute;width:100%;left:0;bottom:0;border-bottom:4px solid #36D995}#footer{position:absolute;width:100%;left:0;bottom:0;font-size:.75em;line-height:1.334em;background:#1F2026;color:#737580;z-index:20;transform:translate3d(0,0,0);transform-style:preserve-3d;opacity:1}#footer a{color:#9D9FA6;font-weight:400}#footer .credits{text-align:center;font-size:.75em;line-height:1.334em;padding:2.667em;overflow:auto}#footer .credits span{display:block}#footer .credits .credits-theme{float:left}#footer .credits .credits-software{float:right}.post{position:relative;z-index:20}.post .post-image{display:block;margin:0;padding:0}.post .post-image img{display:block;width:100%;height:auto;margin:0;padding:0}.post .post-meta{display:block;font-size:.75em;line-height:1.334em;font-weight:400;margin-bottom:1.334em}.post .post-title{position:relative;color:#000;font-size:2em;line-height:1.375em;font-weight:800;text-indent:-1px;margin:.25em 0 .75em}.post .post-title:before{content:'';position:absolute;left:0;bottom:-.334em;width:1em;margin-bottom:-2px;border-bottom:4px solid #36D995}.post .post-title a{text-decoration:none;color:inherit;font-weight:inherit}#post-index{position:relative;max-width:1200px;margin:0 auto 4em;padding:.5em;z-index:10}@keyframes fade{0%{transform:translate3d(0,3em,0);opacity:0}100%{transform:translate3d(0,0,0);opacity:1}}.post-list{position:relative}.post-list .post{float:left;width:33.3%;transform:translate3d(0,3em,0);transform-style:preserve-3d;opacity:0;animation:fade ease-out .5s forwards;animation-delay:1.4s}@media only screen and (max-width: 50em){.post-list .post{width:49.9%}}@media only screen and (max-width: 30em){.post-list .post{width:100%;float:none}}.post-list .post:nth-child(1){animation-delay:.1s}.post-list .post:nth-child(2){animation-delay:.2s}.post-list .post:nth-child(3){animation-delay:.3s}.post-list .post:nth-child(4){animation-delay:.4s}.post-list .post:nth-child(5){animation-delay:.5s}.post-list .post:nth-child(6){animation-delay:.6s}.post-list .post:nth-child(7){animation-delay:.7s}.post-list .post:nth-child(8){animation-delay:.8s}.post-list .post:nth-child(9){animation-delay:.9s}.post-list .post .inner{padding:2em;margin:.5em;max-width:none;background:#fff;box-sizing:border-box;transform:scale(1);transform-style:preserve-3d}@media only screen and (max-width: 50em){.post-list .post .inner{padding:1em}}.post-list .post .post-link{position:absolute;left:0;top:0;width:100%;height:100%;z-index:10}.post-list .post .post-image{position:relative;margin:-2em -2em 0;overflow:hidden;background:#36D995}@media only screen and (max-width: 50em){.post-list .post .post-image{margin:-1em -1em 0}}.post-list .post .post-image img{transform:scale(1);transform-style:preserve-3d;opacity:1}.post-list .post .post-image:after{content:'';position:absolute;left:-5%;bottom:-2.5em;width:110%;height:4em;background:#fff;border-top:4px solid #36D995;box-shadow:0 0 2em rgba(0,0,0,0.2);transform:rotate(5deg)}.post-list .post .post-title{font-size:1.5em;line-height:1.167em}.post-list .post .post-excerpt{margin:0}.post-list .post .post-more{display:block;margin-top:1.5em}.post-list .post .post-more a{display:inline-block;font-size:.875em;line-height:1.143em;font-weight:400;color:#363740}.post-list .post .post-more a i{color:#2DB77E}.pagination{min-height:3em;margin:4em auto 2em;padding:0;position:relative}.pagination .pagination-item{position:relative;display:block;height:3em;line-height:3em;padding:0 1em;text-align:center;text-decoration:none;font-weight:700;color:#363740;border:1px solid #36D995;border-radius:4em;z-index:60}.pagination .pagination-item i{position:relative}@media only screen and (max-width: 30em){.pagination .pagination-item{width:4em;height:4em;line-height:4em;margin-top:-.5em;padding:0!important}.pagination .pagination-item i{font-size:1.5em}.pagination .pagination-item>span{display:none}}.pagination .pagination-prev{float:right}.pagination .pagination-prev i{right:-.05em}.pagination .pagination-info{display:block;left:0;top:0;height:3em;line-height:3em;position:absolute;text-align:center;width:100%;z-index:50;color:#9D9FA6}#loader-wrapper{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1000}#loader{display:block;position:relative;left:50%;top:50%;width:150px;height:150px;margin:-75px 0 0 -75px;border-radius:50%;border:3px solid transparent;border-top-color:#36D995;animation:spin 2s linear infinite}#loader:before{content:"";position:absolute;top:5px;left:5px;right:5px;bottom:5px;border-radius:50%;border:3px solid transparent;border-top-color:#2DB77E;animation:spin 3s linear infinite}#loader:after{content:"";position:absolute;top:15px;left:15px;right:15px;bottom:15px;border-radius:50%;border:3px solid transparent;border-top-color:#D4D5D9;animation:spin 1.5s linear infinite}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+</style>
+
+
+    </head>
+    <body class="home-template">
+      <div id="loader-wrapper">
+        <div id="loader"></div>
+      </div>
+      <section id="wrapper" style="display: none;">
+        <div id="ajax-container">
+          <nav id="nav" class="nav">
+            <div class="nav-logo">
+              <a href="http://dafian47.gitlab.io/blog">
+      			  
+              </a>
+            </div>
+            <div class="nav-menu">
+              <a class="rss" href="">
+                <i class="icon-rss"></i>
+              </a>
+                
+                <a class="menu" data-action="toc" data-target="toc"><i class="icon-location"></i></a>
+                
+                
+            </div>
+          </nav>
+
+
+<main class="content" role="main">
+	<article class="post">
+		<div class="inner">
+
+			<div id="push">
+
+  			<header class="post-header">
+  				<span class="post-meta">
+						<span class="post-date">5 Jul 2017</span> <span class="reading-time">| <span class="estimated-reading-time">4 min.</span> (<span class="word-count">713</span> words)</span></span>
+  				</span>
+  				<div class="clear"></div>
+  				<h1 class="post-title">Git Basic</h1>
+  			</header>
+
+  			<section class="post-content">
+  				
+
+<h1 id="dasar-git">Dasar Git</h1>
+
+<p>Git adalah <em>tools</em> yang berfungsi sebagai <em>Version Control System (VCS)</em> dan kalau diartikan ke bahasa kita artinya sebuah sistem pelacak perubahan pada file. Git sendiri dibuat oleh orang yang menciptakan <em>Kernel Linux</em>, yup&hellip; tidak salah lagi dia adalah yang mulia <strong>Linus Torvalds</strong>. Pada awalnya Git digunakan untuk membantu pengembangan Kernel Linux sebelum akhirnya dipakai lebih luas di berbagai pengembangan software lainnya dan dibuat <em>Multi-Platform</em> sehingga tersedia di hampir semua OS. Selain Git ada beberapa alternatif lain dari sistem VCS, contohnya: Subversion, Mercurial, CVS, dll.</p>
+
+<h1 id="kenapa-pakai-git">Kenapa Pakai Git</h1>
+
+<p>Kenapa Git penting untuk tim developer? Dengan menggunakan Git, setiap orang dalam sebuah tim dapat melakukan perubahan pada <em>Source Code</em> tanpa harus takut terjadi bentrok ataupun kesulitan dalam menggabungkan hasil perubahan yang mereka lakukan. Dengan menggunakan Git, setiap perubahan pada source-code akan terlacak pesan perubahannya, apa saja yang diubah, siapa yang mengubah dan kapan waktunya.</p>
+
+<p>Link download Git <a href="https://git-scm.com/downloads">Disini</a></p>
+
+<p>Jika sudah di Instal, maka Anda dapat mengecek nya dengan cara:</p>
+
+<pre><code>$ git version
+git version 2.11.0 (Apple Git-81)
+</code></pre>
+
+<h1 id="setup-git">Setup Git</h1>
+
+<p>Sekarang anda telah memiliki Git pada sistem anda, berikutnya anda akan harus melakukan beberapa penyesuai pada lingkungan Git anda. Anda hanya perlu melakukan hal ini sekali saja pada saat memperbaharui versi Git anda, penyesuai tidak perlu dilakukan lagi. Anda pun dapat mengubah penyesuaian tersebut setiap saat.</p>
+
+<h3 id="identitas-anda">Identitas Anda</h3>
+
+<p>Hal pertama yang harus anda lakukan ketika menginstalkan Git adalah mengatur username dan alamat e-mail anda. Hal ini penting karena setiap commit pada Git akan menggunakan informasi ini, dan informasi ini akan selamanya disimpan dengan commit yang anda buat tersebut:</p>
+
+<pre><code>$ git config --global user.name &quot;M Rizki Dafianto&quot;
+$ git config --global user.email dafian47@gmail.com
+</code></pre>
+
+<h3 id="mengecek-settingan-git">Mengecek Settingan Git</h3>
+
+<p>Jika anda ingin mengecek settingan anda, anda dapat menggunakan peritah git config &ndash;list untuk menampilkan semua settingan yang digunakan Git:</p>
+
+<pre><code>$ git config --list
+user.name=M Rizki Dafianto
+user.email=dafian47@gmail.com
+core.autocrlf=input
+core.excludesfile=/Users/dafian/.gitignore_global
+...
+</code></pre>
+
+<h1 id="perintah-dasar-git">Perintah Dasar Git</h1>
+
+<p>Perintah-perintah dasar dari Git yang paling sering digunakan dan wajib kita kuasai yaitu: <code>git init</code>, <code>git status</code>, <code>git add</code>, <code>git commit</code>, <code>git pull / push</code>, <code>git checkout</code>, <code>git diff</code>, <code>git merge</code>, <code>git remote</code> dan <code>git reset</code>. Sebetulnya masih banyak fungsi lain dari Git untuk kasus-kasus tertentu tapi mungkin perintah yang telah disebutkan sebelumnya yang akan paling sering kita gunakan, berikut ini adalah penjelasan singkatnya:</p>
+
+<ul>
+<li><code>git init</code> untuk membuat repo lokal baru pada perintah ini akan dibuat sebuah folder baru yang bernama &ldquo;.git&rdquo;</li>
+<li><code>git status</code> untuk melihat status dari repo lokal</li>
+<li><code>git add</code> untuk menambahkan file ke dalam repo yang sebelumnya sudah dibuat</li>
+<li><code>git commit</code> untuk menyimpan seluruh perubahan yang terjadi</li>
+<li><code>git pull / push</code> untuk menyimpan dan mengambil data dari remote repo</li>
+<li><code>git checkout</code> untuk pindah branch</li>
+<li><code>git diff</code> untuk membandingkan perubahan file</li>
+<li><code>git merge</code> untuk melakukan penggabungan antar branch</li>
+<li><code>git remote</code> untuk menambahkan remote repo baru</li>
+<li><code>git reset</code> untuk membatalkan perubahan pada repo lokal</li>
+</ul>
+
+<h1 id="contoh-penerapan-git">Contoh Penerapan Git</h1>
+
+<p>Berikut ini adalah contoh kasus penggunaan Git pada sebuah folder:</p>
+
+<pre><code>$ cd /folder-project
+</code></pre>
+
+<p>Pertama masuk terlebih dahulu ke folder <em>Source Code</em> yang ingin ditambahkan ke Git.</p>
+
+<pre><code>$ git init
+</code></pre>
+
+<p>Setelah <code>git init</code> selesai maka akan muncul sebuah folder baru yang bernama &ldquo;.git&rdquo;, disinilah seluruh hal yang berhubungan dengan Git akan tersimpan.</p>
+
+<pre><code>$ git add
+</code></pre>
+
+<p>Berikutnya kita akan menambahkan seluruh file yang ada didalam folder.</p>
+
+<p>Pada tahap ini file yang ditambahkan belum benar-benar masuk ke repo, perintah <code>git add</code> hanya memberi tanda pada file agar ditambahkan pada <code>git commit</code> berikutnya. Untuk melihat file apa saja yang akan ditambahkan ketik perintah berikut:</p>
+
+<pre><code>$ git status
+</code></pre>
+
+<p>Apabila telah yakin dengan perubahan yang dilakukan maka kita bisa melakukan git commit untuk menyimpan perubahan ke repo dengan perintah berikut:</p>
+
+<pre><code>$ git commit -m &quot;Initial Commit&quot;
+</code></pre>
+
+<p>Pesan pada <code>git commit</code> harus dibuat dengan singkat dan jelas untuk mempermudah developer lain dalam memahami apa yang terjadi didalam commit tersebut. Hal ini akan berguna ketika terjadi konflik pada proses merge.</p>
+
+<h3 id="contoh-yang-disarankan">Contoh yang Disarankan</h3>
+
+<blockquote>
+<p>&ldquo;update new mail config on config.php&rdquo;</p>
+
+<p>&ldquo;remove unused code on SiteController.php&rdquo;</p>
+
+<p>&ldquo;revert changes on last commit because of bug on xxxxx&rdquo;</p>
+</blockquote>
+
+<h3 id="contoh-yang-tidak-jelas-dan-tidak-disarankan">Contoh yang Tidak Jelas dan Tidak Disarankan</h3>
+
+<blockquote>
+<p>&ldquo;updates&rdquo;</p>
+
+<p>&ldquo;commit&rdquo;</p>
+
+<p>&ldquo;add some item&rdquo;</p>
+</blockquote>
+
+<h1 id="remote-repository">Remote Repository</h1>
+
+<p>Remote repository atau remote repo adalah tempat penyimpanan Git yang berada di cloud. Beberapa layanan yang terpopuler adalah <a href="https://github.com/">GitHub</a>, <a href="https://bitbucket.org/">Bitbucket</a> dan <a href="https://gitlab.com/">GitLab</a>. Untuk development kita menggunakan GitLab sebagai remote repo karena kita bisa membuat private repo dan team pada layanan gratisnya, sementara GitHub tidak.</p>
+
+<h1 id="referensi">Referensi</h1>
+
+<ul>
+<li><a href="https://git-scm.com/book/id/">https://git-scm.com/book/id/</a></li>
+<li><a href="http://blog.coldev.co/">http://blog.coldev.co/</a></li>
+</ul>
+
+  			</section>
+
+  			<footer class="post-footer">
+  				<div class="post-tags">
+            
+            
+                <a href="http://dafian47.gitlab.io/blogtags/basic/">basic</a>
+            
+                <a href="http://dafian47.gitlab.io/blogtags/git/">git</a>
+            
+            
+  				</div>
+  				<div class="post-share">
+  					<a class="icon-twitter" href="https://twitter.com/share?text=Git%20Basic&url=http%3a%2f%2fdafian47.gitlab.io%2fblog%2fpost%2fgit-basic%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  						<span>Twitter</span>
+  					</a>
+  					<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fdafian47.gitlab.io%2fblog%2fpost%2fgit-basic%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  						<span>Facebook</span>
+  					</a>
+  					<a class="icon-gplus" href="https://plus.google.com/share?url=http%3a%2f%2fdafian47.gitlab.io%2fblog%2fpost%2fgit-basic%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+  						<span>Google+</span>
+  					</a>
+  				</div>
+  			</footer>
+
+  			<aside class="post-comments">
+    
+    
+    
+</aside>
+
+
+			</div>
+
+			<nav class="post-nav">
+				
+					<a class="post-nav-item post-nav-next" href="http://dafian47.gitlab.io/blog/post/project-gitlab/">
+						<section class="post-nav-teaser">
+							<span class="post-nav-icon"><i class="icon-arrow-left"></i></span>
+							<span class="post-nav-info">
+								<h4 class="post-nav-title">Project di GitLab</h4>
+								<p class="post-nav-excerpt">Kali ini kita kan menggunakan GitLab sebagai Cloud Repository kita&hellip;</p>
+							</span>
+						</section>
+					</a>
+				
+				
+				<div class="clear"></div>
+			</nav>
+
+		</div>
+	</article>
+</main>
+
+				<div id="body-class" style="display: none;"></div>
+				<footer id="footer">
+					<section class="credits">
+						<span class="credits-theme">Theme <a href="https://github.com/zenithar/hugo-theme-bleak" target="_blank" rel="nofollow">Bleak</a> by <a href="http://zutrinken.com" target="_blank" rel="nofollow">zutrinken</a></span>
+						<span class="credits-software">Published with <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a></span>
+					</section>
+				</footer>
+				
+				
+<div id="tocMenu" data-target="toc">
+    <div class="menu-header">
+        <span class="menu-label">Menu</span>
+        <a class="menu-close" data-action="toc" data-target="toc"></a>
+    </div>
+    <div id="toc" class="menu-list">
+        <nav id="TableOfContents">
+<ul>
+<li><a href="#dasar-git">Dasar Git</a></li>
+<li><a href="#kenapa-pakai-git">Kenapa Pakai Git</a></li>
+<li><a href="#setup-git">Setup Git</a>
+<ul>
+<li>
+<ul>
+<li><a href="#identitas-anda">Identitas Anda</a></li>
+<li><a href="#mengecek-settingan-git">Mengecek Settingan Git</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#perintah-dasar-git">Perintah Dasar Git</a></li>
+<li><a href="#contoh-penerapan-git">Contoh Penerapan Git</a>
+<ul>
+<li>
+<ul>
+<li><a href="#contoh-yang-disarankan">Contoh yang Disarankan</a></li>
+<li><a href="#contoh-yang-tidak-jelas-dan-tidak-disarankan">Contoh yang Tidak Jelas dan Tidak Disarankan</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#remote-repository">Remote Repository</a></li>
+<li><a href="#referensi">Referensi</a></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+
+				<div class="overlay"></div>
+			</div>
+		</section>
+
+    <script async src="http://dafian47.gitlab.io/blogjs/main.js"></script>
+
+
+
+
+  <noscript><link rel="stylesheet" href="http://dafian47.gitlab.io/blogcss/main.css"></noscript>
+</body>
+</html>
+
