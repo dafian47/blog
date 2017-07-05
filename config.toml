@@ -1,6 +1,6 @@
 languageCode = "en-us"
 title = "My Personal Blog"
 baseurl = "http://dafian47.gitlab.io/blog"
-theme = "hugo-theme-bleak"
+theme = "hugo-cactus-theme"
 # cover = "/images/cover.jpg"
 publishDir = "docs"
