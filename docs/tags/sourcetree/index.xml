@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sourcetree on My Personal Blog</title>
-    <link>http://dafian47.gitlab.io/blog/tags/sourcetree/index.xml</link>
+    <link>https://dafian47.github.io/blog/tags/sourcetree/index.xml</link>
     <description>Recent content in Sourcetree on My Personal Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://dafian47.gitlab.io/blog/tags/sourcetree/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dafian47.github.io/blog/tags/sourcetree/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Menggunakan SourceTree</title>
-      <link>http://dafian47.gitlab.io/blog/post/using-sourcetree/</link>
+      <link>https://dafian47.github.io/blog/post/using-sourcetree/</link>
       <pubDate>Wed, 05 Jul 2017 16:54:24 +0200</pubDate>
       
-      <guid>http://dafian47.gitlab.io/blog/post/using-sourcetree/</guid>
+      <guid>https://dafian47.github.io/blog/post/using-sourcetree/</guid>
       <description>
 
 &lt;h1 id=&#34;register-akun-atlassian&#34;&gt;Register Akun Atlassian&lt;/h1&gt;

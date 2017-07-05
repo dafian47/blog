@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on My Personal Blog</title>
-    <link>http://dafian47.gitlab.io/blog/tags/git/index.xml</link>
+    <link>https://dafian47.github.io/blog/tags/git/index.xml</link>
     <description>Recent content in Git on My Personal Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://dafian47.gitlab.io/blog/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dafian47.github.io/blog/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Menggunakan SourceTree</title>
-      <link>http://dafian47.gitlab.io/blog/post/using-sourcetree/</link>
+      <link>https://dafian47.github.io/blog/post/using-sourcetree/</link>
       <pubDate>Wed, 05 Jul 2017 16:54:24 +0200</pubDate>
       
-      <guid>http://dafian47.gitlab.io/blog/post/using-sourcetree/</guid>
+      <guid>https://dafian47.github.io/blog/post/using-sourcetree/</guid>
       <description>
 
 &lt;h1 id=&#34;register-akun-atlassian&#34;&gt;Register Akun Atlassian&lt;/h1&gt;
@@ -260,10 +260,10 @@ Branch master set up to track remote branch master from origin.
     
     <item>
       <title>Manajemen Konflik Git</title>
-      <link>http://dafian47.gitlab.io/blog/post/manage-conflict/</link>
+      <link>https://dafian47.github.io/blog/post/manage-conflict/</link>
       <pubDate>Wed, 05 Jul 2017 16:44:24 +0200</pubDate>
       
-      <guid>http://dafian47.gitlab.io/blog/post/manage-conflict/</guid>
+      <guid>https://dafian47.github.io/blog/post/manage-conflict/</guid>
       <description>&lt;p&gt;Dalam kerja tim, seringkali terdapat file yang sama-sama digunakan. Sehingga mengalami perubahan. Ketika akan melakukan &lt;code&gt;commit&lt;/code&gt; maka file tersebut kan terjadi konflik. Berikut salah satu cara menanganu konfilk.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -295,10 +295,10 @@ Branch master set up to track remote branch master from origin.
     
     <item>
       <title>Project di GitLab</title>
-      <link>http://dafian47.gitlab.io/blog/post/project-gitlab/</link>
+      <link>https://dafian47.github.io/blog/post/project-gitlab/</link>
       <pubDate>Wed, 05 Jul 2017 16:34:24 +0200</pubDate>
       
-      <guid>http://dafian47.gitlab.io/blog/post/project-gitlab/</guid>
+      <guid>https://dafian47.github.io/blog/post/project-gitlab/</guid>
       <description>
 
 &lt;h1 id=&#34;login-gitlab&#34;&gt;Login GitLab&lt;/h1&gt;
@@ -334,10 +334,10 @@ Branch master set up to track remote branch master from origin.
     
     <item>
       <title>Git Basic</title>
-      <link>http://dafian47.gitlab.io/blog/post/git-basic/</link>
+      <link>https://dafian47.github.io/blog/post/git-basic/</link>
       <pubDate>Wed, 05 Jul 2017 16:28:00 +0200</pubDate>
       
-      <guid>http://dafian47.gitlab.io/blog/post/git-basic/</guid>
+      <guid>https://dafian47.github.io/blog/post/git-basic/</guid>
       <description>
 
 &lt;h1 id=&#34;dasar-git&#34;&gt;Dasar Git&lt;/h1&gt;

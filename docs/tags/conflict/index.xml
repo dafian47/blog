@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Conflict on My Personal Blog</title>
-    <link>http://dafian47.gitlab.io/blog/tags/conflict/index.xml</link>
+    <link>https://dafian47.github.io/blog/tags/conflict/index.xml</link>
     <description>Recent content in Conflict on My Personal Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://dafian47.gitlab.io/blog/tags/conflict/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dafian47.github.io/blog/tags/conflict/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Manajemen Konflik Git</title>
-      <link>http://dafian47.gitlab.io/blog/post/manage-conflict/</link>
+      <link>https://dafian47.github.io/blog/post/manage-conflict/</link>
       <pubDate>Wed, 05 Jul 2017 16:44:24 +0200</pubDate>
       
-      <guid>http://dafian47.gitlab.io/blog/post/manage-conflict/</guid>
+      <guid>https://dafian47.github.io/blog/post/manage-conflict/</guid>
       <description>&lt;p&gt;Dalam kerja tim, seringkali terdapat file yang sama-sama digunakan. Sehingga mengalami perubahan. Ketika akan melakukan &lt;code&gt;commit&lt;/code&gt; maka file tersebut kan terjadi konflik. Berikut salah satu cara menanganu konfilk.&lt;/p&gt;
 
 &lt;ul&gt;

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gitlab on My Personal Blog</title>
-    <link>http://dafian47.gitlab.io/blog/tags/gitlab/index.xml</link>
+    <link>https://dafian47.github.io/blog/tags/gitlab/index.xml</link>
     <description>Recent content in Gitlab on My Personal Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://dafian47.gitlab.io/blog/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dafian47.github.io/blog/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Project di GitLab</title>
-      <link>http://dafian47.gitlab.io/blog/post/project-gitlab/</link>
+      <link>https://dafian47.github.io/blog/post/project-gitlab/</link>
       <pubDate>Wed, 05 Jul 2017 16:34:24 +0200</pubDate>
       
-      <guid>http://dafian47.gitlab.io/blog/post/project-gitlab/</guid>
+      <guid>https://dafian47.github.io/blog/post/project-gitlab/</guid>
       <description>
 
 &lt;h1 id=&#34;login-gitlab&#34;&gt;Login GitLab&lt;/h1&gt;
