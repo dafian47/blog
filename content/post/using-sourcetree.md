@@ -25,11 +25,11 @@ Berikut panduan singkat instalasi SourceTree.
 * Setelah selesai didownload, buka file tersebut (EXE untuk Windows atau DMG untuk Mac)
 * Klik tombol **Use an existing account** untuk login menggunakan akun Atlassian. Bila belum klik tombol **Go to My Atlassian** dan ikuti petunjuknya untuk membuat akun baru. Gunakan akun email Anda, karena bisa digunakan untuk login Bitbucket.
 
-![Halaman Instalasi Awal SourceTree](pic/sourcetree-install.png)
+![Halaman Instalasi Awal SourceTree](https://raw.githubusercontent.com/dafian47/blog/master/static/pic/sourcetree-install.png)
 
 * Ketika ada pilihan untuk menambahkan repo, klik tombol **Skip Setup** karena kita akan menggunakan GitLab sebagai Servernya.
 
-![Halaman Menambahkan Repo](pic/sourcetree-add-repo.png)
+![Halaman Menambahkan Repo](https://raw.githubusercontent.com/dafian47/blog/master/static/pic/sourcetree-add-repo.png)
 
 * Setelah sudah, kita kan lanjut untuk menambahkan remote mulai dari lokal kita.
 
@@ -60,7 +60,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDgR8Vr1AOa0xsnHRZHXBbDTPb5YClq9pcJJ34yWU3q
 
 * Copy mulai dari ssh-rsa hingga akun email kita. Dan paste di Halaman SSH-Key. Misalnya seperti ini. Dan klik tombol Add Key.
 
-![Halaman SSH Key](pic/page-ssh-key.png)
+![Halaman SSH Key](https://raw.githubusercontent.com/dafian47/blog/master/static/pic/page-ssh-key.png)
 
 * Setelah selesai kita siap menggunakan integrasi antara GitLab & SourceTree :)
 
@@ -84,7 +84,7 @@ $ touch README.md
 
 * Isikan file README.md kita. Misalnya seperti ini.
 
-![File README.md](pic/file-readme.png)
+![File README.md](https://raw.githubusercontent.com/dafian47/blog/master/static/pic/file-readme.png)
 
 * Setelah itu jalankan perintah berikut untuk membuat repo lokal
 
@@ -128,7 +128,7 @@ Branch master set up to track remote branch master from origin.
 
 * Buka halaman project Git kita tadi yang bernama DemoGit. Maka tampilannya kan seperti ini
 
-![Halaman DemoGit yang Baru](pic/page-first-commit.png)
+![Halaman DemoGit yang Baru](https://raw.githubusercontent.com/dafian47/blog/master/static/pic/page-first-commit.png)
 
 
 # Panduan Singkat SourceTree
@@ -143,19 +143,19 @@ Dalam kerja sama tim, kadang kala kita membantu developer lainnya. Dan kita haru
 
 * Buka SourceTree dan klik tombol New+
 
-![Tampilan Awal SourceTree](pic/sourcetree-home.png)
+![Tampilan Awal SourceTree](https://raw.githubusercontent.com/dafian47/blog/master/static/pic/sourcetree-home.png)
 
 * Pilih menu **Clone from URL**
 
-![Tampilan Menu SourceTree](pic/sourcetree-menu-clone.png)
+![Tampilan Menu SourceTree](https://raw.githubusercontent.com/dafian47/blog/master/static/pic/sourcetree-menu-clone.png)
 
 * Paste url SSH tadi di **Source URL:**. Ganti letak project di **Destination Path:**. Anda bisa mengganti nama project di **Name:**. Tunggu hingga muncul tulisan **This is Git Repository**. Setelah itu klik tombol Done.
 
-![Tampilan Kloning Repo](pic/sourcetree-clone-repo.png)
+![Tampilan Kloning Repo](https://raw.githubusercontent.com/dafian47/blog/master/static/pic/sourcetree-clone-repo.png)
 
 * Setelah selesai Repo disinkron, maka akan tampil sebagai berikut.
 
-![Tampilan Kloning Repo](pic/sourcetree-lokal-repo.png)
+![Tampilan Kloning Repo](https://raw.githubusercontent.com/dafian47/blog/master/static/pic/sourcetree-lokal-repo.png)
 
 ### Push Repo dari Lokal ke GitLab
 
@@ -164,19 +164,19 @@ Contoh kali ini kita kan melakukan `push` perubahan di lokal kita ke server.
 * Sebagai contoh, edit isi file **README.md**. Tambahkan nama Anda di dalamnya.
 * Setelah selesa, buka SourceTree kembali dan pilih Project nya. Maka akan tampil perubahan seperti ini.
 
-![Tampilan SourceTree Ketika Ada Perubahan File](pic/sourcetree-uncommited-file.png)
+![Tampilan SourceTree Ketika Ada Perubahan File](https://raw.githubusercontent.com/dafian47/blog/master/static/pic/sourcetree-uncommited-file.png)
 
 * Lakukan `commit` pada perubahan dengan cara klik tombol **Commit** di pojok kiri atas. Kemudian kan tampil seperti ini.
 
-![Tampilan SourceTree Ketika Akan Melakukan Commit](pic/sourcetree-commit-file.png)
+![Tampilan SourceTree Ketika Akan Melakukan Commit](https://raw.githubusercontent.com/dafian47/blog/master/static/pic/sourcetree-commit-file.png)
 
 * Centang file yang akan di `commit`. Bila terdapat ikon tanda tanya, artinya file tersebut baru dan harus di centang untuk menambahkanya ke repo lokal. Isikan deskripsi di kotak dibawah nama kita. Kemudian tekan tombol **Commit**.
 
-![Tampilan SourceTree Ketika Ada File yang Belum Di Add](pic/sourcetree-unpush-file.png)
+![Tampilan SourceTree Ketika Ada File yang Belum Di Add](https://raw.githubusercontent.com/dafian47/blog/master/static/pic/sourcetree-unpush-file.png)
 
 * Sampai sini kita sudah menyimpan di repo lokal kita. Di SourceTree terlihat ada ikon `1 ahead` yang berarti perubahan repo lokal kita terdapat satu yang baru dibandingkan repo server. Untuk melakukan sinkroni nya. Tekan tombol **Push**. Kemudian tampil dialog sebagai berikut.
 
-![Tampilan SourceTree Ketika Akan Melakukan Push](pic/sourcetree-dialog-push.png)
+![Tampilan SourceTree Ketika Akan Melakukan Push](https://raw.githubusercontent.com/dafian47/blog/master/static/pic/sourcetree-dialog-push.png)
 
 * Pastikan checkbox di dalam kotak master dicentang seperti contoh. Untuk melakukan branch mana yang akan disinkronisasi. Setelah itu klik tombol **OK**. Maka tidak akan ada ikon lagi. Dan periksa di Website GitLab. Apakah sudah berubah file README.md kita.
 
@@ -186,11 +186,11 @@ Contoh kali ini kita kan melakukan `pull` dari server ke lokal. Tambahkan File L
 
 * Buka SourceTree, dan buka project DemoGit. Maka akan tampil ikon `1 behind`, bila belum klik tombol **Fetch** untuk mengecek perubahan di server.
 
-![Tampilan SourceTree Ketika Ada Perubahan Baru di Server](pic/sourcetree-unpull-file.png)
+![Tampilan SourceTree Ketika Ada Perubahan Baru di Server](https://raw.githubusercontent.com/dafian47/blog/master/static/pic/sourcetree-unpull-file.png)
 
 * Kita akan melakukan sinkronisasi repo lokal dari repo server. Klik tombol **Pull**. Maka akan tampil dialog sebagai berikut.
 
-![Tampilan SourceTree Ketika Ada Perubahan Baru di Server](pic/sourcetree-dialog-pull.png)
+![Tampilan SourceTree Ketika Ada Perubahan Baru di Server](https://raw.githubusercontent.com/dafian47/blog/master/static/pic/sourcetree-dialog-pull.png)
 
 * Biarkan secara default, kemudian klik tombol **OK**. Selesai
 

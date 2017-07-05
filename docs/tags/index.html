@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-us">
 	<head>
 		<meta charset="utf-8">
@@ -7,7 +7,7 @@
 		<meta name="author" content="M Rizki Dafianto">
 		<meta name="description" content="My Personal Blog">
 		<meta name="generator" content="Hugo 0.18.1" />
-		<title>Conflict &middot; Dafian&#39;s Personal Blog</title>
+		<title>Tags &middot; Dafian&#39;s Personal Blog</title>
 		<link rel="shortcut icon" href="https://dafian47.github.io/blog/images/favicon.ico">
 		<link rel="stylesheet" href="https://dafian47.github.io/blog/css/style.css">
 		<link rel="stylesheet" href="https://dafian47.github.io/blog/css/highlight.css">
@@ -20,8 +20,8 @@
 		
 	</head>
 
-	<body>
-	<nav class="main-nav">
+   <body>
+      <nav class="main-nav">
 	
 	
 		<a href='https://dafian47.github.io/blog/'> <span class="arrow">←</span>Home</a>
@@ -35,7 +35,7 @@
 	
 </nav>
 
-	<div class="profile">
+      <div class="profile">
     <section id="wrapper">
         <header id="header">
             <a href='https://dafian47.github.io/blog/about'>
@@ -47,29 +47,35 @@
     </section>
 </div>
 
-	<section id="wrapper" class="home">
-		
-		<div class="archive">
-			<h3>2017</h3>
-			<ul>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 5</div>
-						<a href="https://dafian47.github.io/blog/post/manage-conflict/" class="post-link">
-							Manajemen Konflik Git
-						</a>
-					</div>
-					
-			</ul>
-		</div>
-		
-		
-	</section>
 
-	<div class="dd">
-	</div>
+       <section id="wrapper" class="tags">
+           <div class="page-tags" id="tags">
+               
+                <span class="tags">
+                    <a href="/tags/basic" rel="1">basic(1)</a>
+                </span>
+               
+                <span class="tags">
+                    <a href="/tags/conflict" rel="1">conflict(1)</a>
+                </span>
+               
+                <span class="tags">
+                    <a href="/tags/git" rel="4">git(4)</a>
+                </span>
+               
+                <span class="tags">
+                    <a href="/tags/gitlab" rel="1">gitlab(1)</a>
+                </span>
+               
+                <span class="tags">
+                    <a href="/tags/sourcetree" rel="1">sourcetree(1)</a>
+                </span>
+               
+           </div>
+           
+       </section>
 
-	<script src="https://dafian47.github.io/blog/js/jquery-2.2.4.min.js"></script>
+       <script src="https://dafian47.github.io/blog/js/jquery-2.2.4.min.js"></script>
 <script src="https://dafian47.github.io/blog/js/main.js"></script>
 <script src="https://dafian47.github.io/blog/js/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
@@ -80,5 +86,17 @@
 
 
 
-	</body>
+       <script src="https://dafian47.github.io/blog/js/jquery.tagcloud.js"></script>
+<script type="text/javascript">
+$.fn.tagcloud.defaults = {
+  size: {start: 10, end: 16, unit: 'pt'},
+  color: {start: '#bbb', end: '#f52'}
+};
+
+$(function () {
+  $('#tags a').tagcloud();
+});
+</script>
+
+   </body>
 </html>

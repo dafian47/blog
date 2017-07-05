@@ -1,100 +1,67 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en-us">
 	<head>
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="M Rizki Dafianto">
+		<meta name="description" content="My Personal Blog">
+		<meta name="generator" content="Hugo 0.18.1" />
+		<title>Manajemen Konflik Git &middot; Dafian&#39;s Personal Blog</title>
+		<link rel="shortcut icon" href="https://dafian47.github.io/blog/images/favicon.ico">
+		<link rel="stylesheet" href="https://dafian47.github.io/blog/css/style.css">
+		<link rel="stylesheet" href="https://dafian47.github.io/blog/css/highlight.css">
+		
 
+		
+		<link rel="stylesheet" href="https://dafian47.github.io/blog/css/monosocialiconsfont.css">
+		
 
-<meta name="generator" content="Hugo 0.18.1" />
-<title>Manajemen Konflik Git</title>
-<link rel="shortcut icon" href="https://dafian47.github.io/blog/images/favicon.ico">
-<link rel="stylesheet" href="https://dafian47.github.io/blog/css/style.css">
-<link rel="stylesheet" href="https://dafian47.github.io/blog/css/highlight.css">
+		
+	</head>
 
-
-
-<link rel="stylesheet" href="https://dafian47.github.io/blog/css/monosocialiconsfont.css">
-
-
-
-
-<meta property="og:title" content="Manajemen Konflik Git" />
-<meta property="og:description" content="Dalam kerja tim, seringkali terdapat file yang sama-sama digunakan" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://dafian47.github.io/blog/post/manage-conflict/" />
-
-
-<meta property="og:updated_time" content="2017-07-05T16:44:24&#43;02:00"/>
-
-
-
-
-
-
-
-
-
-
-
-
-<meta itemprop="name" content="Manajemen Konflik Git">
-<meta itemprop="description" content="Dalam kerja tim, seringkali terdapat file yang sama-sama digunakan">
-
-
-<meta itemprop="dateModified" content="2017-07-05T16:44:24&#43;02:00" />
-<meta itemprop="wordCount" content="150">
-
-
-
-<meta itemprop="keywords" content="basic,conflict,git,gitlab,sourcetree," />
-
-
-
-  <meta name="twitter:card" content="summary"/>
-
-
-
-<meta name="twitter:title" content="Manajemen Konflik Git"/>
-<meta name="twitter:description" content="Dalam kerja tim, seringkali terdapat file yang sama-sama digunakan"/>
-
-
-
-
-    </head>
-<body>
-    <nav class="main-nav">
+    <body>
+       <nav class="main-nav">
+	
 	
 		<a href='https://dafian47.github.io/blog/'> <span class="arrow">←</span>Home</a>
 	
+	<a href='https://dafian47.github.io/blog/post'>Archive</a>
+	<a href='https://dafian47.github.io/blog/tags'>Tags</a>
+	<a href='https://dafian47.github.io/blog/about'>About</a>
 
 	
 
 	
 </nav>
 
-    <section id="wrapper">
-        
-        
-<article class="post">
-    <header>
-        <h1>Manajemen Konflik Git</h1>
-        <h2 class="headline">
-        July 5, 2017
-        <br>
-        
-        
-            
-                <a href="https://dafian47.github.io/blog/tags/conflict">conflict</a>
-            
-                <a href="https://dafian47.github.io/blog/tags/git">git</a>
-            
-        
-        
-        </h2>
-    </header>
-    <section id="post-body">
-        <p>Dalam kerja tim, seringkali terdapat file yang sama-sama digunakan. Sehingga mengalami perubahan. Ketika akan melakukan <code>commit</code> maka file tersebut kan terjadi konflik. Berikut salah satu cara menanganu konfilk.</p>
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        Manajemen Konflik Git
+                    </h1>
+                    <h2 class="headline">
+                    Jul 5, 2017 16:44
+                    · 150 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://dafian47.github.io/blog/tags/conflict">conflict</a>
+                          
+                              <a href="https://dafian47.github.io/blog/tags/git">git</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p>Dalam kerja tim, seringkali terdapat file yang sama-sama digunakan. Sehingga mengalami perubahan. Ketika akan melakukan <code>commit</code> maka file tersebut kan terjadi konflik. Berikut salah satu cara menanganu konfilk.</p>
 
 <ul>
 <li>Misalnya kita rubah file <strong>README.md</strong> di server dan menambahkan Copyright.</li>
@@ -103,83 +70,46 @@
 <li>Ketika selesa melakukan <code>commit</code> dan akan melakukan <code>push</code>. SourceTree memunculkan dialog keterangan sebagai berikut.</li>
 </ul>
 
-<p><img src="pic/sourcetree-error-push.png" alt="SourceTree Error Ketika Akan Melakukan Push" /></p>
+<p><img src="https://raw.githubusercontent.com/dafian47/blog/master/static/pic/sourcetree-error-push.png" alt="SourceTree Error Ketika Akan Melakukan Push" /></p>
 
 <ul>
 <li>Klik tombol <strong>OK</strong>. Disini kita harus melakukan <code>pull</code> terlebih dahulu. Lakukan <code>pull</code> dengan klik tombol <strong>Pull</strong>. Maka kemudian kan tampil seperti ini. Berikut adalah tampilan ketika kita terdapat file conflict. Dan kita harus <em>menyelesaikannya</em> secara manual.</li>
 </ul>
 
-<p><img src="pic/sourcetree-file-conflict.png" alt="SourceTree Menunjukan File Conflict" /></p>
+<p><img src="https://raw.githubusercontent.com/dafian47/blog/master/static/pic/sourcetree-file-conflict.png" alt="SourceTree Menunjukan File Conflict" /></p>
 
 <ul>
 <li>Buka file yang mengalami konflik. Dalam hal ini file <strong>README.md</strong> di Text Editor. Maka akan tampil seperti ini.</li>
 </ul>
 
-<p><img src="pic/file-conflict.png" alt="Text Editor File Conflict" /></p>
+<p><img src="https://raw.githubusercontent.com/dafian47/blog/master/static/pic/file-conflict.png" alt="Text Editor File Conflict" /></p>
 
 <ul>
 <li>Hapus teks bertuliskan <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> dan <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 2d895eb1a3616aa474c30052dcfb30b0cd75d783</code>. Dan selesaikan perubahan yang konflik tersebut. Setelah selesai, save dan lakukan <code>commit</code> seperti biasa. Dan sudah dapat di <code>push</code> ke server.</li>
 </ul>
 
-    </section>
-</article>
+                </section>
+            </article>
 
-<footer id="post-meta" class="clearfix">
-    
-    <img class="avatar" src="https://dafian47.github.io/blog/images/avatar.png">
-    <div>
-        <span class="dark"></span>
-        <span></span>
-    </div>
-    
-    <section id="sharing">
-        <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fdafian47.github.io%2fblog%2fpost%2fmanage-conflict%2f - Manajemen%20Konflik%20Git "><span class="icon-twitter"> tweet</span></a>
+            
 
-<a class="facebook" href="#" onclick="
-    window.open(
-      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
-      'facebook-share-dialog',
-      'width=626,height=436');
-    return false;"><span class="icon-facebook-rect"> Share</span>
-</a>
+            
 
-    </section>
-</footer>
+            
 
+            
+        </section>
 
-
-<ul id="post-list" class="archive readmore">
-    <h3>Read more</h3>
-
-    
-    
-    
-        <li>
-            <a href="/blog/post/using-sourcetree/">Menggunakan SourceTree<aside class="dates">Jul 5 2017</aside></a>
-        </li>
-    
-        <li>
-            <a href="/blog/post/project-gitlab/">Project di GitLab<aside class="dates">Jul 5 2017</aside></a>
-        </li>
-    
-        <li>
-            <a href="/blog/post/git-basic/">Git Basic<aside class="dates">Jul 5 2017</aside></a>
-        </li>
-    
-</ul>
-
-
-
-        
-    </section>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://dafian47.github.io/blog/js/jquery-2.2.4.min.js"></script>
 <script src="https://dafian47.github.io/blog/js/main.js"></script>
-<script src="https://dafian47.github.io/blog/js/highlight.js"></script>
+<script src="https://dafian47.github.io/blog/js/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 
 
 
 
-</body>
+
+
+    </body>
 </html>
