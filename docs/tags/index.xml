@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Dafian&#39;s Personal Blog</title>
+    <link>https://dafian47.github.io/blog/tags/</link>
+    <description>Recent content in Tags on Dafian&#39;s Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Jul 2017 16:28:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://dafian47.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Basic</title>
+      <link>https://dafian47.github.io/blog/tags/basic/</link>
+      <pubDate>Wed, 05 Jul 2017 16:28:00 +0200</pubDate>
+      
+      <guid>https://dafian47.github.io/blog/tags/basic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Conflict</title>
+      <link>https://dafian47.github.io/blog/tags/conflict/</link>
+      <pubDate>Wed, 05 Jul 2017 16:44:24 +0200</pubDate>
+      
+      <guid>https://dafian47.github.io/blog/tags/conflict/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://dafian47.github.io/blog/tags/git/</link>
+      <pubDate>Wed, 05 Jul 2017 16:54:24 +0200</pubDate>
+      
+      <guid>https://dafian47.github.io/blog/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gitlab</title>
+      <link>https://dafian47.github.io/blog/tags/gitlab/</link>
+      <pubDate>Wed, 05 Jul 2017 16:34:24 +0200</pubDate>
+      
+      <guid>https://dafian47.github.io/blog/tags/gitlab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sourcetree</title>
+      <link>https://dafian47.github.io/blog/tags/sourcetree/</link>
+      <pubDate>Wed, 05 Jul 2017 16:54:24 +0200</pubDate>
+      
+      <guid>https://dafian47.github.io/blog/tags/sourcetree/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

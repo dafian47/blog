@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Conflict on Dafian&#39;s Personal Blog</title>
-    <link>https://dafian47.github.io/blog/tags/conflict/index.xml</link>
+    <link>https://dafian47.github.io/blog/tags/conflict/</link>
     <description>Recent content in Conflict on Dafian&#39;s Personal Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://dafian47.github.io/blog/tags/conflict/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Jul 2017 16:44:24 +0200</lastBuildDate>
+    
+	<atom:link href="https://dafian47.github.io/blog/tags/conflict/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Manajemen Konflik Git</title>
@@ -14,33 +17,8 @@
       <pubDate>Wed, 05 Jul 2017 16:44:24 +0200</pubDate>
       
       <guid>https://dafian47.github.io/blog/post/manage-conflict/</guid>
-      <description>&lt;p&gt;Dalam kerja tim, seringkali terdapat file yang sama-sama digunakan. Sehingga mengalami perubahan. Ketika akan melakukan &lt;code&gt;commit&lt;/code&gt; maka file tersebut kan terjadi konflik. Berikut salah satu cara menanganu konfilk.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Misalnya kita rubah file &lt;strong&gt;README.md&lt;/strong&gt; di server dan menambahkan Copyright.&lt;/li&gt;
-&lt;li&gt;Dan di lokal kita juga menambahkan Copyright&lt;/li&gt;
-&lt;li&gt;Buka SourceTree, untuk kita melakukan &lt;code&gt;commit&lt;/code&gt; dan &lt;code&gt;push&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Ketika selesa melakukan &lt;code&gt;commit&lt;/code&gt; dan akan melakukan &lt;code&gt;push&lt;/code&gt;. SourceTree memunculkan dialog keterangan sebagai berikut.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/dafian47/blog/master/static/pic/sourcetree-error-push.png&#34; alt=&#34;SourceTree Error Ketika Akan Melakukan Push&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Klik tombol &lt;strong&gt;OK&lt;/strong&gt;. Disini kita harus melakukan &lt;code&gt;pull&lt;/code&gt; terlebih dahulu. Lakukan &lt;code&gt;pull&lt;/code&gt; dengan klik tombol &lt;strong&gt;Pull&lt;/strong&gt;. Maka kemudian kan tampil seperti ini. Berikut adalah tampilan ketika kita terdapat file conflict. Dan kita harus &lt;em&gt;menyelesaikannya&lt;/em&gt; secara manual.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/dafian47/blog/master/static/pic/sourcetree-file-conflict.png&#34; alt=&#34;SourceTree Menunjukan File Conflict&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Buka file yang mengalami konflik. Dalam hal ini file &lt;strong&gt;README.md&lt;/strong&gt; di Text Editor. Maka akan tampil seperti ini.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/dafian47/blog/master/static/pic/file-conflict.png&#34; alt=&#34;Text Editor File Conflict&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Hapus teks bertuliskan &lt;code&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; HEAD&lt;/code&gt; dan &lt;code&gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; 2d895eb1a3616aa474c30052dcfb30b0cd75d783&lt;/code&gt;. Dan selesaikan perubahan yang konflik tersebut. Setelah selesai, save dan lakukan &lt;code&gt;commit&lt;/code&gt; seperti biasa. Dan sudah dapat di &lt;code&gt;push&lt;/code&gt; ke server.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Dalam kerja tim, seringkali terdapat file yang sama-sama digunakan. Sehingga mengalami perubahan. Ketika akan melakukan commit maka file tersebut kan terjadi konflik. Berikut salah satu cara menanganu konfilk.
+ Misalnya kita rubah file README.md di server dan menambahkan Copyright. Dan di lokal kita juga menambahkan Copyright Buka SourceTree, untuk kita melakukan commit dan push Ketika selesa melakukan commit dan akan melakukan push. SourceTree memunculkan dialog keterangan sebagai berikut.      Klik tombol OK.</description>
     </item>
     
   </channel>
