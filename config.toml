@@ -3,7 +3,7 @@ baseurl = "https://dafian47.github.io/blog/"
 # themesDir = "../.."
 languageCode = "en-us"
 title = "Dafian's Personal Blog"
-theme = "hugo-theme-cactus-plus"
+theme = "hugo_theme_solit"
 # Enter your tracking code to enable Google Analytics
 googleAnalytics = ""
 # Disable comments by leaving disqusShortname empty
@@ -12,8 +12,8 @@ publishDir = "docs"
 
 [params]
 	name = "M Rizki Dafianto"
-	description = "My Personal Blog"
-	bio = "Blogger & Programmer"
+	description = "Dafian's Personal Blog"
+	bio = "Love Android - ReactiveX - SheilaGank"
 	# Enter optionally your twitter account
 	twitter = "dafian47"
 	enableRSS = false
